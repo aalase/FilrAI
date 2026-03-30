@@ -1,22 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-accent: #111a2c;
+      --card: #131f35;
+      --text: #e6edf7;
+      --muted: #9fb0ca;
+      --brand: #5da8ff;
+      --brand-strong: #2f7de1;
+      --border: rgba(255, 255, 255, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1000px circle at 10% -10%, #1d3766 0%, transparent 35%),
+        linear-gradient(180deg, var(--bg-accent), var(--bg));
+      min-height: 100vh;
+      padding: clamp(1rem, 2vw, 2rem);
+    }
+
+    .container {
+      width: min(860px, 100%);
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: clamp(1.25rem, 2.8vw, 2rem);
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+    }
+
+    p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: white;
+      text-decoration: none;
+      background: linear-gradient(180deg, var(--brand), var(--brand-strong));
+      border-radius: 10px;
+      padding: 0.55rem 0.85rem;
+      font-weight: 600;
+    }
+
+    .back:hover,
+    .back:focus-visible {
+      filter: brightness(1.08);
+      outline: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
+  <main class="container">
+    <h1>Privacy Policy</h1>
 
-  <p>SEC Connect does not require user accounts and does not collect or store personal data on external servers.</p>
+    <p>SEC Connect does not require user accounts and does not collect or store personal data on external servers.</p>
 
-  <p>The app may require a user-provided identifier (such as a user agent) to access third-party data sources including the U.S. Securities and Exchange Commission (SEC). This information is stored locally on the device and is only used to make requests to those services.</p>
+    <p>The app may require a user-provided identifier (such as a user agent) to access third-party data sources including the U.S. Securities and Exchange Commission (SEC). This information is stored locally on the device and is only used to make requests to those services.</p>
 
-  <p>All data requests are made directly from the user’s device to the respective data providers. SEC Connect does not transmit or store this information on developer-controlled servers.</p>
+    <p>All data requests are made directly from the user’s device to the respective data providers. SEC Connect does not transmit or store this information on developer-controlled servers.</p>
 
-  <p>The app does not use tracking technologies, advertising frameworks, or analytics services.</p>
+    <p>The app does not use tracking technologies, advertising frameworks, or analytics services.</p>
 
-  <p>This privacy policy may be updated prior to release or as features evolve.</p>
+    <p>This privacy policy may be updated prior to release or as features evolve.</p>
 
-  <p>If you have any questions, please contact: your-email@example.com</p>
+    <p>If you have any questions, please contact: your-email@example.com</p>
+
+    <a class="back" href="index.html">← Back to Home</a>
+  </main>
 </body>
 </html>
