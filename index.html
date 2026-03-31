@@ -113,6 +113,16 @@
   </style>
 </head>
 <body>
+  <script>
+    // Defensive cleanup: remove accidentally rendered doctype text if a host prepends malformed markup.
+    document.addEventListener("DOMContentLoaded", () => {
+      for (const node of [...document.body.childNodes]) {
+        if (node.nodeType === Node.TEXT_NODE && /!DOCTYPE html>/i.test(node.textContent || "")) {
+          node.remove();
+        }
+      }
+    });
+  </script>
   <main class="shell">
     <section class="hero">
       <span class="badge">Financial Research</span>
