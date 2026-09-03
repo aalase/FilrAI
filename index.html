@@ -7,57 +7,72 @@
   <title>FilrAI</title>
   <style>
     :root {
-      --bg: #050607;
-      --bg-accent: #2f3338;
-      --card: #101214;
-      --text: #f6f8fa;
-      --muted: #c3c9cf;
-      --brand: #f7f9fb;
-      --brand-strong: #8f969e;
-      --ring: rgba(247, 249, 251, 0.35);
-      --border: rgba(255, 255, 255, 0.18);
+      --page: #f5f7f8;
+      --surface: #ffffff;
+      --ink: #162027;
+      --muted: #5c6973;
+      --line: #d7dee2;
+      --dark: #11181d;
+      --dark-soft: #1c262d;
+      --teal: #0f766e;
+      --blue: #2563eb;
+      --amber: #b45309;
+      --green-soft: #e6f4ef;
+      --blue-soft: #e8f0ff;
+      --amber-soft: #fff1dc;
+      --shadow: 0 18px 50px rgba(16, 24, 30, 0.14);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
-      min-height: 100vh;
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(1200px circle at 10% -10%, #5f666d 0%, transparent 35%),
-        radial-gradient(1000px circle at 90% 0%, #3d4349 0%, transparent 30%),
-        linear-gradient(180deg, var(--bg-accent), var(--bg));
-      padding: clamp(1.25rem, 4vw, 4rem);
+      color: var(--ink);
+      background: var(--page);
     }
 
-    .shell {
-      width: min(1040px, 100%);
-      margin: 0 auto;
+    a {
+      color: inherit;
     }
-
 
     .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(215, 222, 226, 0.86);
+      background: rgba(245, 247, 248, 0.92);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      width: min(1160px, calc(100% - 32px));
+      min-height: 72px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-bottom: clamp(1.5rem, 4vw, 3rem);
+      gap: 24px;
     }
 
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
-      color: var(--brand);
+      gap: 12px;
+      color: var(--ink);
       text-decoration: none;
       font-weight: 800;
-      letter-spacing: -0.03em;
     }
 
     .brand img {
-      width: 2.75rem;
-      height: 2.75rem;
+      width: 42px;
+      height: 42px;
       display: block;
     }
 
@@ -65,141 +80,787 @@
       font-size: 1.05rem;
     }
 
-    .hero {
-      max-width: 760px;
-      padding: clamp(2rem, 6vw, 5rem) 0 clamp(1.5rem, 4vw, 3rem);
-      border-left: 2px solid var(--brand);
-      padding-left: clamp(1.25rem, 3vw, 2rem);
-    }
-
-    .badge {
-      display: inline-block;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #f7f9fb;
-      background: rgba(247, 249, 251, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.42);
-      border-radius: 999px;
-      padding: 0.35rem 0.7rem;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(3rem, 11vw, 7rem);
-      line-height: 0.9;
-      letter-spacing: -0.08em;
-    }
-
-    .lead {
-      margin: 1.25rem 0 0;
-      max-width: 62ch;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
       color: var(--muted);
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      line-height: 1.6;
+      font-size: 0.92rem;
+      font-weight: 650;
     }
 
-    .links {
-      display: grid;
-      gap: 0;
-      margin-top: clamp(1.5rem, 4vw, 3rem);
-      border-top: 1px solid var(--border);
-    }
-
-    .link-row {
-      display: grid;
-      grid-template-columns: minmax(160px, 0.35fr) 1fr auto;
-      gap: 1rem;
-      align-items: baseline;
-      border-bottom: 1px solid var(--border);
-      padding: 1.1rem 0;
+    .nav-links a {
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 12px;
+      border-radius: 8px;
       text-decoration: none;
-      color: var(--text);
-      transition: color 0.2s ease, padding-left 0.2s ease, border-color 0.2s ease;
     }
 
-    .link-card:hover,
-    .link-card:focus-visible {
-      transform: translateY(-2px);
-      border-color: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 0 0 3px var(--ring);
-      outline: none;
-    }
-
-    .link-row:hover,
-    .link-row:focus-visible {
-      padding-left: 0.65rem;
-      border-color: rgba(255, 255, 255, 0.7);
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--ink);
+      background: var(--surface);
       outline: 2px solid transparent;
     }
 
-    .link-row:hover::after,
-    .link-row:focus-visible::after {
-      color: var(--brand);
-      transform: translateX(0.25rem);
+    main {
+      overflow: hidden;
     }
 
-    .link-row strong {
+    .hero {
+      color: #f8fbfc;
+      background:
+        linear-gradient(90deg, rgba(17, 24, 29, 0.98) 0%, rgba(17, 24, 29, 0.94) 58%, rgba(17, 24, 29, 0.9) 100%),
+        var(--dark);
+    }
+
+    .hero-inner {
+      width: min(1160px, calc(100% - 32px));
+      min-height: calc(100vh - 72px);
+      max-height: 820px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(340px, 0.7fr);
+      gap: clamp(28px, 6vw, 72px);
+      align-items: center;
+      padding: clamp(54px, 8vw, 96px) 0;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 10px;
+      border: 1px solid rgba(248, 251, 252, 0.32);
+      border-radius: 8px;
+      color: #d6e6e8;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 22px;
+      font-size: 6.8rem;
+      line-height: 0.9;
+      letter-spacing: 0;
+    }
+
+    .hero-copy .lead {
+      max-width: 650px;
+      margin-bottom: 28px;
+      color: #d5dde2;
+      font-size: 1.2rem;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 8px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button.primary {
+      color: #0d171b;
+      background: #ffffff;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      border-color: #ffffff;
+      outline: 3px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 690px;
+    }
+
+    .hero-point {
+      min-height: 94px;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .hero-point strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #ffffff;
+      font-size: 0.92rem;
+    }
+
+    .hero-point span {
+      color: #c3d0d6;
+      font-size: 0.86rem;
+      line-height: 1.45;
+    }
+
+    .product-panel {
+      width: 100%;
+      max-width: 520px;
+      justify-self: end;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      background: rgba(7, 12, 15, 0.82);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panel-bar {
+      height: 42px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #e15b64;
+    }
+
+    .dot:nth-child(2) {
+      background: #f2bd4b;
+    }
+
+    .dot:nth-child(3) {
+      background: #44c26f;
+    }
+
+    .screenshot-placeholder {
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%),
+        rgba(255, 255, 255, 0.04);
+    }
+
+    .placeholder-inner {
+      width: min(360px, 100%);
+      aspect-ratio: 16 / 10;
+      display: grid;
+      place-items: center;
+      border: 1px dashed rgba(255, 255, 255, 0.38);
+      border-radius: 8px;
+      color: #d5dde2;
+      background: rgba(255, 255, 255, 0.05);
+      text-align: center;
+    }
+
+    .placeholder-inner strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #ffffff;
       font-size: 1rem;
     }
 
-    .link-row span {
-      color: var(--muted);
-      font-size: 0.95rem;
+    .placeholder-inner span {
+      display: block;
+      max-width: 220px;
+      color: #b8c5cb;
+      font-size: 0.86rem;
       line-height: 1.5;
     }
 
-    @media (max-width: 640px) {
-      .link-row {
-        grid-template-columns: 1fr auto;
+    .section {
+      padding: clamp(64px, 9vw, 112px) 0;
+    }
+
+    .section.alt {
+      background: var(--surface);
+    }
+
+    .wrap {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      max-width: 740px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      margin-bottom: 12px;
+      font-size: 3rem;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.65;
+    }
+
+    .viewer-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.82fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .viewer-shot {
+      min-height: 520px;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(15, 118, 110, 0.1), rgba(37, 99, 235, 0.08)),
+        var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .viewer-placeholder {
+      width: min(680px, 100%);
+      aspect-ratio: 16 / 10;
+      display: grid;
+      place-items: center;
+      border: 1px dashed #9baab3;
+      border-radius: 8px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.62);
+      text-align: center;
+    }
+
+    .viewer-placeholder strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-size: 1.05rem;
+    }
+
+    .viewer-placeholder span {
+      display: block;
+      max-width: 300px;
+      line-height: 1.5;
+    }
+
+    .viewer-features {
+      display: grid;
+      gap: 12px;
+    }
+
+    .viewer-feature {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .viewer-feature h3 {
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+      line-height: 1.25;
+    }
+
+    .viewer-feature p {
+      margin-bottom: 0;
+      color: var(--muted);
+      line-height: 1.58;
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .step {
+      min-height: 232px;
+      padding: 22px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      color: #ffffff;
+      background: var(--dark);
+      font-weight: 850;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+      font-size: 1.08rem;
+    }
+
+    .step p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .model-section {
+      color: #f7fbfc;
+      background: var(--dark);
+    }
+
+    .model-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
+      gap: clamp(28px, 6vw, 64px);
+      align-items: center;
+    }
+
+    .model-copy h2 {
+      margin-bottom: 14px;
+      font-size: 3rem;
+      line-height: 1.02;
+    }
+
+    .model-copy p {
+      color: #c7d3d9;
+      line-height: 1.68;
+      font-size: 1.04rem;
+    }
+
+    .model-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .model-item {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 12px;
+      color: #e4edf1;
+      line-height: 1.55;
+    }
+
+    .model-item::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      margin-top: 8px;
+      border-radius: 999px;
+      background: #5eead4;
+    }
+
+    .workbook {
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #f8fafb;
+      box-shadow: var(--shadow);
+    }
+
+    .sheet-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 0 12px;
+      color: #5a6770;
+      background: #edf2f4;
+      border-bottom: 1px solid #d5dde2;
+      font-size: 0.78rem;
+      font-weight: 750;
+    }
+
+    .sheet {
+      width: 100%;
+      border-collapse: collapse;
+      color: #19252c;
+      font-size: 0.82rem;
+    }
+
+    .sheet th,
+    .sheet td {
+      height: 42px;
+      padding: 0 12px;
+      border-right: 1px solid #dde4e7;
+      border-bottom: 1px solid #dde4e7;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .sheet th:first-child,
+    .sheet td:first-child {
+      text-align: left;
+      font-weight: 750;
+    }
+
+    .sheet th {
+      color: #5c6973;
+      background: #f3f6f7;
+      font-size: 0.75rem;
+    }
+
+    .sheet tr.total td {
+      color: #0f5f58;
+      background: #e9f7f4;
+      font-weight: 850;
+    }
+
+    .footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .footer-inner {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .footer-links a {
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 750;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      color: var(--ink);
+      background: var(--page);
+      outline: 2px solid transparent;
+    }
+
+    @media (max-width: 920px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0;
       }
 
-      .link-row span {
-        grid-column: 1 / -1;
+      .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+
+      .hero-inner,
+      .model-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        min-height: auto;
+      }
+
+      .product-panel {
+        justify-self: stretch;
+        max-width: none;
+      }
+
+      .viewer-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        background:
+          linear-gradient(180deg, rgba(17, 24, 29, 0.98) 0%, rgba(17, 24, 29, 0.92) 100%),
+          var(--dark);
+      }
+
+      .hero-inner {
+        padding: 54px 0 58px;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      .section-head h2,
+      .model-copy h2 {
+        font-size: 2.25rem;
+      }
+
+      .hero-points,
+      .workflow {
+        grid-template-columns: 1fr;
+      }
+
+      .viewer-shot {
+        min-height: 320px;
+        padding: 18px;
+      }
+
+      .screenshot-placeholder {
+        min-height: 280px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .sheet {
+        font-size: 0.72rem;
+      }
+
+      .sheet th,
+      .sheet td {
+        height: 38px;
+        padding: 0 6px;
+        white-space: normal;
       }
     }
   </style>
 </head>
 <body>
-  <script>
-    // Defensive cleanup: remove accidentally rendered doctype text if a host prepends malformed markup.
-    document.addEventListener("DOMContentLoaded", () => {
-      for (const node of [...document.body.childNodes]) {
-        if (node.nodeType === Node.TEXT_NODE && /!DOCTYPE html>/i.test(node.textContent || "")) {
-          node.remove();
-        }
-      }
-    });
-  </script>
-  <main class="shell">
-    <header class="site-header" aria-label="FilrAI home">
-      <a class="brand" href="index.html">
-        <img src="icon_512.png" alt="" width="44" height="44">
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="FilrAI home">
+        <img src="icon_512.png" alt="" width="42" height="42">
         <span>FilrAI</span>
       </a>
-    </header>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#model-builder">Model Builder</a>
+      </div>
+    </nav>
+  </header>
 
+  <main>
     <section class="hero">
-      <span class="badge">Financial Research</span>
-      <h1>FilrAI</h1>
-      <p class="lead">A streamlined way to explore SEC filing data, stay on top of company disclosures, and research market activity with confidence.</p>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Financial Research</span>
+          <h1>FilrAI</h1>
+          <p class="lead">Research public companies from SEC filings, investor materials, annotations, and AI-assisted summaries in one focused workspace built exclusively for macOS.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#research">Explore capabilities</a>
+          </div>
+          <div class="hero-points" aria-label="FilrAI highlights">
+            <div class="hero-point">
+              <strong>Filing-first</strong>
+              <span>Search companies, open recent SEC filings, and inspect source documents.</span>
+            </div>
+            <div class="hero-point">
+              <strong>Document viewer</strong>
+              <span>Navigate filings, take notes, search with AI, chat with documents, and extract tables.</span>
+            </div>
+            <div class="hero-point">
+              <strong>Excel exports</strong>
+              <span>Export filing tables and historical data for building three-statement models.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-panel" aria-label="FilrAI product preview">
+          <div class="panel-bar">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="screenshot-placeholder">
+            <div class="placeholder-inner">
+              <div>
+                <strong>App screenshot placeholder</strong>
+                <span>Final product images will be added after the app UI is finished.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <nav class="links" aria-label="Site links">
-      <a class="link-row" href="privacy.html">
-        <strong>Privacy Policy</strong>
-        <span>How your data is handled and what is (and is not) collected.</span>
-      </a>
-      <a class="link-card" href="terms.html">
-        <strong>Terms and Conditions</strong>
-        <span>Terms of use, AI disclosure, and financial disclaimer in one place.</span>
-      </a>
-      <a class="link-row" href="support.html">
-        <strong>Support</strong>
-        <span>Need help? Find contact details, privacy help, and support information.</span>
-      </a>
-    </nav>
+    <section class="section alt" id="research">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>A filing viewer built for actual document work.</h2>
+          <p>The document viewer is the center of FilrAI: source navigation, AI search, chat, notes, and table exports stay close to the filing you are reading.</p>
+        </div>
+        <div class="viewer-layout">
+          <div class="viewer-shot" aria-label="Document viewer screenshot placeholder">
+            <div class="viewer-placeholder">
+              <div>
+                <strong>Document viewer screenshot placeholder</strong>
+                <span>Final screenshots will show outline navigation, AI search, document chat, notes, and table exports.</span>
+              </div>
+            </div>
+          </div>
+          <div class="viewer-features">
+            <article class="viewer-feature">
+              <h3>Browser-like navigation</h3>
+              <p>Move through filings like a browser, with familiar back and forward navigation plus fast jumps through document sections.</p>
+            </article>
+            <article class="viewer-feature">
+              <h3>AI search and document chat</h3>
+              <p>Ask filing-specific questions, search source context, and keep answers tied to the document you are reviewing.</p>
+            </article>
+            <article class="viewer-feature">
+              <h3>Notes and annotations</h3>
+              <p>Highlight source text, save notes, and keep research observations connected to the original filing.</p>
+            </article>
+            <article class="viewer-feature">
+              <h3>Excel exports</h3>
+              <p>Export useful filing tables directly from the viewer so source review can flow into spreadsheet and model work.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>A practical path from company to evidence.</h2>
+          <p>The app is organized for repeated public-company review: find the company, inspect the documents, capture evidence, and build the model.</p>
+        </div>
+        <div class="workflow">
+          <article class="step">
+            <span class="step-number">1</span>
+            <h3>Search a company</h3>
+            <p>Start with a company and load context, filing references, and current research surfaces.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">2</span>
+            <h3>Open source filings</h3>
+            <p>Review quarterly and annual SEC filings, with IR material available as supporting context.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">3</span>
+            <h3>Navigate and extract</h3>
+            <p>Use outlines, AI search, document chat, notes, and table exports to capture what matters.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">4</span>
+            <h3>Export the work</h3>
+            <p>Export source tables and historical data into Excel-ready outputs for model building.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section model-section" id="model-builder">
+      <div class="wrap model-layout">
+        <div class="model-copy">
+          <span class="eyebrow">Model Builder</span>
+          <h2>Excel exports that carry the research forward.</h2>
+          <p>The export workflow is built around getting historical filing data and extracted source tables into Excel-ready form for three-statement model work.</p>
+          <div class="model-list">
+            <div class="model-item">Export historical data for building three-statement models.</div>
+            <div class="model-item">Move useful filing tables out of the viewer and into Excel-friendly outputs.</div>
+            <div class="model-item">Keep source review and spreadsheet work connected instead of starting from scratch.</div>
+          </div>
+        </div>
+
+        <div class="workbook" aria-label="Workbook preview">
+          <div class="sheet-toolbar">Model Builder - Statement Export</div>
+          <table class="sheet">
+            <thead>
+              <tr>
+                <th>Line item</th>
+                <th>FY2023</th>
+                <th>FY2024</th>
+                <th>FY2025</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Revenue</td>
+                <td>100.0</td>
+                <td>112.4</td>
+                <td>126.8</td>
+              </tr>
+              <tr>
+                <td>Gross profit</td>
+                <td>43.2</td>
+                <td>49.9</td>
+                <td>57.1</td>
+              </tr>
+              <tr>
+                <td>Operating income</td>
+                <td>21.8</td>
+                <td>25.6</td>
+                <td>30.2</td>
+              </tr>
+              <tr class="total">
+                <td>Free cash flow</td>
+                <td>18.4</td>
+                <td>22.1</td>
+                <td>26.5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>FilrAI for financial research. Built exclusively for macOS.</span>
+      <nav class="footer-links" aria-label="Legal and support links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

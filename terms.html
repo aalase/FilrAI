@@ -3,190 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="icon_512.png">
+  <link rel="stylesheet" href="page.css">
   <title>FilrAI Terms and Conditions</title>
-  <style>
-    :root {
-      --bg: #050607;
-      --bg-accent: #2f3338;
-      --card: #101214;
-      --text: #f6f8fa;
-      --muted: #c3c9cf;
-      --brand: #f7f9fb;
-      --brand-strong: #8f969e;
-      --border: rgba(255, 255, 255, 0.18);
-      --panel: rgba(255, 255, 255, 0.07);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(1000px circle at 10% -10%, #5f666d 0%, transparent 35%),
-        linear-gradient(180deg, var(--bg-accent), var(--bg));
-      min-height: 100vh;
-      padding: clamp(1.25rem, 4vw, 4rem);
-    }
-
-    .container {
-      width: min(900px, 100%);
-      margin: 0 auto;
-      padding: clamp(1rem, 3vw, 2rem) 0 clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem);
-      border-left: 2px solid var(--border);
-    }
-
-    .site-header {
-      margin-bottom: clamp(1.75rem, 4vw, 3rem);
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      color: var(--brand);
-      text-decoration: none;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-
-    .brand img {
-      width: 2.5rem;
-      height: 2.5rem;
-      display: block;
-    }
-
-    .brand span {
-      font-size: 1rem;
-    }
-
-    h1 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-size: clamp(2.1rem, 6vw, 4.5rem);
-      line-height: 0.95;
-      letter-spacing: -0.06em;
-    }
-
-    h2 {
-      margin-top: 2.2rem;
-      margin-bottom: 0.7rem;
-      padding-top: 1.1rem;
-      border-top: 1px solid var(--border);
-      font-size: 1.25rem;
-    }
-
-    p, li {
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    p {
-      margin: 0 0 1rem;
-    }
-
-    ul {
-      margin-top: 0;
-      padding-left: 1.3rem;
-    }
-
-    a {
-      color: #f7f9fb;
-    }
-
-    .updated {
-      color: #f7f9fb;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 0.8rem 1rem;
-      margin: 1rem 0 1.25rem;
-    }
-
-    .notice {
-      background: rgba(247, 249, 251, 0.10);
-      border: 1px solid rgba(255, 255, 255, 0.32);
-      border-radius: 12px;
-      padding: 1rem;
-      margin: 1rem 0;
-    }
-
-    .back {
-      display: inline-flex;
-      gap: 0.35rem;
-      align-items: center;
-      margin-top: 1rem;
-      color: var(--brand);
-      text-decoration: none;
-      border-bottom: 1px solid currentColor;
-      padding-bottom: 0.15rem;
-      font-weight: 700;
-    }
-
-    .back:hover,
-    .back:focus-visible {
-      color: white;
-      outline: none;
-    }
-  </style>
 </head>
 <body>
-  <main class="container">
-    <h1>Terms and Conditions</h1>
-    <p class="updated"><strong>Effective date:</strong> May 9, 2026</p>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="FilrAI home">
+        <img src="icon_512.png" alt="" width="42" height="42">
+        <span>FilrAI</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#research">Research</a>
+        <a href="index.html#workflow">Workflow</a>
+        <a href="index.html#model-builder">Model Builder</a>
+      </div>
+    </nav>
+  </header>
 
-    <p class="notice">These Terms and Conditions combine FilrAI's terms of use, AI disclosure, and financial disclaimer into one document.</p>
+  <main>
+    <section class="page-hero">
+      <div class="hero-inner">
+        <h1>Terms and Conditions</h1>
+        <p class="hero-copy">Terms of use, AI disclosure, and financial disclaimer for using FilrAI and this website.</p>
+      </div>
+    </section>
 
-    <h2>Terms of Use</h2>
-    <p>These Terms and Conditions describe the basic rules for using FilrAI and this website. By using FilrAI, you agree to use the app responsibly and only for lawful purposes.</p>
+    <section class="content-band">
+      <article class="content-wrap document-card">
+        <p class="updated"><strong>Effective date:</strong>&nbsp;May 9, 2026</p>
 
-    <h2>Informational Use Only</h2>
-    <p>FilrAI is provided for informational, research, and productivity purposes. FilrAI does not provide investment, legal, tax, accounting, or financial advice. You are responsible for independently verifying information before relying on it.</p>
+        <h2>Terms of Use</h2>
+        <p>These Terms and Conditions describe the basic rules for using FilrAI and this website. By using FilrAI, you agree to use the app responsibly, only for lawful purposes, and only with content you are authorized to process.</p>
 
-    <h2>Your Responsibilities</h2>
-    <p>You agree not to use FilrAI to submit unlawful, harmful, infringing, confidential, or sensitive information that you are not authorized to process. You are responsible for the prompts, documents, and other content you choose to submit.</p>
+        <h2>Informational Use Only</h2>
+        <p>FilrAI is provided for informational, research, and productivity purposes. It helps you review public company information, but it does not replace your own judgment or independent review of original source material.</p>
 
-    <h2>AI Disclosure</h2>
-    <p>FilrAI includes AI-assisted features that can help summarize filings, explain disclosures, compare company information, and answer research questions.</p>
+        <h2>AI Features</h2>
+        <p>FilrAI includes AI-assisted features that can help summarize filings, explain disclosures, compare company information, and answer research questions. Some AI features use cloud-based model providers. When you use those features, FilrAI may send your prompt, relevant filing excerpts, contextual information, and generated outputs to third-party AI services so they can process the request.</p>
+        <p>AI-generated responses may contain mistakes, omit important details, misread a filing, misunderstand context, or present information that is stale or incomplete. Do not submit account credentials, private financial records, confidential company information, material non-public information, or sensitive personal information unless you are comfortable with that information being processed by cloud services.</p>
 
-    <h2>Use of Cloud Models</h2>
-    <p>Some AI features use cloud-based model providers. When you use those features, FilrAI may send your prompt, relevant filing excerpts, contextual information, and generated outputs to third-party AI services so they can process the request.</p>
+        <h2>Financial Disclaimer</h2>
+        <p>FilrAI is not an investment adviser, broker-dealer, law firm, accounting firm, or tax adviser. Nothing in FilrAI should be interpreted as a recommendation to buy, sell, hold, or trade any security or financial instrument.</p>
+        <p>SEC filings, market data, RSS feeds, and AI-generated summaries may be delayed, incomplete, inaccurate, or misinterpreted. You are solely responsible for your investment, trading, tax, legal, and financial decisions. Consider consulting qualified professionals before making decisions based on public filings, market data, or AI-assisted analysis.</p>
 
-    <h2>AI Limitations</h2>
-    <p>AI-generated responses may contain mistakes. They may omit important details, misread a filing, misunderstand context, or present information that is stale or incomplete. Always verify important information against original filings and reliable sources.</p>
+        <h2>Third-Party Services</h2>
+        <p>FilrAI may rely on third-party data sources, AI providers, hosting services, and public filing systems. These services may change, become unavailable, or provide incomplete or delayed information. FilrAI is not responsible for third-party services or content.</p>
 
-    <h2>Do Not Submit Sensitive Information</h2>
-    <p>Do not submit account credentials, private financial records, confidential company information, material non-public information, or sensitive personal information unless you are comfortable with that information being processed by cloud services.</p>
+        <h2>No Warranties and Limitation of Liability</h2>
+        <p>FilrAI is provided on an "as is" and "as available" basis. We do not guarantee that the app will be uninterrupted, error-free, secure, or that any information or AI-generated output will be accurate or complete.</p>
+        <p>To the maximum extent permitted by law, FilrAI and its developers will not be liable for losses or damages arising from your use of the app, reliance on AI outputs, investment decisions, data-source errors, service interruptions, or third-party services.</p>
 
-    <h2>Financial Disclaimer</h2>
-    <p>FilrAI is a research tool for reviewing public company information, including SEC filings and related market disclosures. It is not an investment adviser, broker-dealer, law firm, accounting firm, or tax adviser.</p>
+        <h2>Changes</h2>
+        <p>These Terms and Conditions may be updated as FilrAI evolves. Continued use of FilrAI after updates means you accept the revised Terms and Conditions.</p>
 
-    <h2>No Investment Advice</h2>
-    <p>Information provided by FilrAI is for informational and educational purposes only. Nothing in FilrAI should be interpreted as a recommendation to buy, sell, hold, or trade any security or financial instrument.</p>
+        <h2>Contact</h2>
+        <p>Questions about these Terms and Conditions can be sent to <a href="mailto:filr.support@gmail.com">filr.support@gmail.com</a>.</p>
 
-    <h2>Verify Source Material</h2>
-    <p>SEC filings, market data, RSS feeds, and AI-generated summaries may be delayed, incomplete, inaccurate, or misinterpreted. Review original filings and source documents before making decisions.</p>
-
-    <h2>You Are Responsible for Decisions</h2>
-    <p>You are solely responsible for your investment, trading, tax, legal, and financial decisions. Consider consulting qualified professionals before making decisions based on public filings, market data, or AI-assisted analysis.</p>
-
-    <h2>Third-Party Services</h2>
-    <p>FilrAI may rely on third-party data sources, AI providers, hosting services, and public filing systems. These services may change, become unavailable, or provide incomplete or delayed information. FilrAI is not responsible for third-party services or content.</p>
-
-    <h2>No Warranties</h2>
-    <p>FilrAI is provided on an "as is" and "as available" basis. We do not guarantee that the app will be uninterrupted, error-free, secure, or that any information or AI-generated output will be accurate or complete.</p>
-
-    <h2>Limitation of Liability</h2>
-    <p>To the maximum extent permitted by law, FilrAI and its developers will not be liable for losses or damages arising from your use of the app, reliance on AI outputs, investment decisions, data-source errors, service interruptions, or third-party services.</p>
-
-    <h2>Changes</h2>
-    <p>These Terms and Conditions may be updated as FilrAI evolves. Continued use of FilrAI after updates means you accept the revised Terms and Conditions.</p>
-
-    <h2>Contact</h2>
-    <p>Questions about these Terms and Conditions can be sent to <a href="mailto:filr.support@gmail.com">filr.support@gmail.com</a>.</p>
-
-    <a class="back" href="index.html">← Back to Home</a>
+        <a class="back" href="index.html">&larr; Back to Home</a>
+      </article>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>FilrAI for financial research. Built exclusively for macOS.</span>
+      <nav class="footer-links" aria-label="Legal and support links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

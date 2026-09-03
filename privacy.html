@@ -4,199 +4,101 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="icon_512.png">
+  <link rel="stylesheet" href="page.css">
   <title>FilrAI Privacy Policy</title>
-  <style>
-    :root {
-      --bg: #050607;
-      --bg-accent: #2f3338;
-      --card: #101214;
-      --text: #f6f8fa;
-      --muted: #c3c9cf;
-      --brand: #f7f9fb;
-      --brand-strong: #8f969e;
-      --border: rgba(255, 255, 255, 0.18);
-      --panel: rgba(255, 255, 255, 0.07);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(1000px circle at 10% -10%, #5f666d 0%, transparent 35%),
-        linear-gradient(180deg, var(--bg-accent), var(--bg));
-      min-height: 100vh;
-      padding: clamp(1.25rem, 4vw, 4rem);
-    }
-
-    .container {
-      width: min(900px, 100%);
-      margin: 0 auto;
-      padding: clamp(1rem, 3vw, 2rem) 0 clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem);
-      border-left: 2px solid var(--border);
-    }
-
-    .site-header {
-      margin-bottom: clamp(1.75rem, 4vw, 3rem);
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      color: var(--brand);
-      text-decoration: none;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-
-    .brand img {
-      width: 2.5rem;
-      height: 2.5rem;
-      display: block;
-    }
-
-    .brand span {
-      font-size: 1rem;
-    }
-
-    h1 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-size: clamp(2.1rem, 6vw, 4.5rem);
-      line-height: 0.95;
-      letter-spacing: -0.06em;
-    }
-
-    h2 {
-      margin-top: 2.2rem;
-      margin-bottom: 0.7rem;
-      padding-top: 1.1rem;
-      border-top: 1px solid var(--border);
-      font-size: 1.25rem;
-    }
-
-    p, li {
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    p {
-      margin: 0 0 1rem;
-    }
-
-    ul {
-      margin-top: 0;
-      padding-left: 1.3rem;
-    }
-
-    a {
-      color: #f7f9fb;
-    }
-
-    .updated {
-      color: #f7f9fb;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 0.8rem 1rem;
-      margin: 1rem 0 1.25rem;
-    }
-
-    .notice {
-      background: rgba(247, 249, 251, 0.10);
-      border: 1px solid rgba(255, 255, 255, 0.32);
-      border-radius: 12px;
-      padding: 1rem;
-      margin: 1rem 0;
-    }
-
-    .back {
-      display: inline-flex;
-      gap: 0.35rem;
-      align-items: center;
-      margin-top: 1rem;
-      color: var(--brand);
-      text-decoration: none;
-      border-bottom: 1px solid currentColor;
-      padding-bottom: 0.15rem;
-      font-weight: 700;
-    }
-
-    .back:hover,
-    .back:focus-visible {
-      color: white;
-      outline: none;
-    }
-  </style>
 </head>
 <body>
-  <main class="container">
-    <header class="site-header">
-      <a class="brand" href="index.html">
-        <img src="icon_512.png" alt="" width="40" height="40">
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="FilrAI home">
+        <img src="icon_512.png" alt="" width="42" height="42">
         <span>FilrAI</span>
       </a>
-    </header>
+      <div class="nav-links">
+        <a href="index.html#research">Research</a>
+        <a href="index.html#workflow">Workflow</a>
+        <a href="index.html#model-builder">Model Builder</a>
+      </div>
+    </nav>
+  </header>
 
-    <h1>Privacy Policy</h1>
-    <p class="updated"><strong>Effective date:</strong> May 9, 2026</p>
+  <main>
+    <section class="page-hero">
+      <div class="hero-inner">
+        <h1>Privacy Policy</h1>
+        <p class="hero-copy">How FilrAI handles app data, cloud AI requests, local storage, third-party services, and support communications.</p>
+      </div>
+    </section>
 
-    <p>FilrAI is a macOS app for researching SEC filings, company disclosures, market-related feeds, and AI-assisted summaries. This Privacy Policy explains what information may be processed when you use FilrAI and how that information is handled.</p>
+    <section class="content-band">
+      <article class="content-wrap document-card">
+        <p class="updated"><strong>Effective date:</strong>&nbsp;May 9, 2026</p>
 
-    <div class="notice">
-      <p><strong>Important update:</strong> Some FilrAI features use cloud-based AI model providers. When you use those features, prompts, filing excerpts, questions, and generated outputs may be transmitted to third-party AI services to provide responses. Third-party AI providers may use submitted data according to their own policies, including to improve or train models.</p>
-    </div>
+        <p>FilrAI is a macOS app for researching SEC filings, company disclosures, investor materials, and AI-assisted summaries. This Privacy Policy explains what information FilrAI handles and when information may leave your device.</p>
 
-    <h2>Information You Provide</h2>
-    <p>Depending on the features you use, FilrAI may process information you enter into the app, including:</p>
-    <ul>
-      <li>Searches, company names, ticker symbols, filing references, and research questions.</li>
-      <li>Prompts, notes, excerpts, or documents that you ask FilrAI to summarize or analyze.</li>
-      <li>A user-provided identifier, such as a user agent, used to access third-party data sources including the U.S. Securities and Exchange Commission (SEC).</li>
-      <li>Your email address and message contents if you contact support.</li>
-    </ul>
+        <h2>Information FilrAI Handles</h2>
+        <p>Depending on the features you use, FilrAI may handle:</p>
+        <ul>
+          <li>Company searches, ticker symbols, filing references, and research questions.</li>
+          <li>Notes, annotations, highlighted text, uploaded PDFs, and app preferences.</li>
+          <li>Prompts, filing excerpts, document context, and generated outputs when you use AI-assisted features.</li>
+          <li>A user-provided identifier, such as a user agent, used to access third-party data sources including the U.S. Securities and Exchange Commission.</li>
+          <li>Your email address and message contents if you contact support.</li>
+        </ul>
 
-    <h2>Cloud AI Processing</h2>
-    <p>FilrAI may send user prompts, selected filing content, context needed to answer a request, and generated outputs to cloud AI model providers. These providers process the information to generate summaries, explanations, or other AI-assisted responses, and may use submitted data according to their own policies, including to improve or train models.</p>
-    <p>Please do not submit sensitive personal information, account credentials, confidential business information, material non-public information, or private financial records unless you are comfortable with that information being processed by cloud services.</p>
+        <h2>Local Storage</h2>
+        <p>FilrAI does not require user accounts. App settings, cached filing data, notes, annotations, uploaded documents, and preferences are stored locally on your device unless a feature clearly involves an external service.</p>
+        <p>Local app data remains on your device until you delete it through the app, remove the files through macOS, or uninstall FilrAI.</p>
 
-    <h2>Third-Party Services and Data Sources</h2>
-    <p>FilrAI may connect to third-party services, including:</p>
-    <ul>
-      <li>SEC systems and other public filing or market-information sources.</li>
-      <li>Cloud AI model providers used to generate AI-assisted responses.</li>
-      <li>Email and hosting providers used to operate this website and respond to support requests.</li>
-    </ul>
-    <p>Third-party services may process information according to their own terms and privacy practices.</p>
+        <h2>Cloud AI Features</h2>
+        <p>Some FilrAI features use cloud-based AI services. When you use those features, prompts, selected filing excerpts, document context, questions, and generated outputs may be sent to FilrAI cloud services and third-party AI model providers to process the request.</p>
+        <p>Cloud services may process, log, or retain submitted data according to their API data policies, security practices, and service settings. Please do not submit account credentials, private financial records, confidential company information, material non-public information, or sensitive personal information unless you are comfortable with that information being processed by cloud services.</p>
 
-    <h2>Local Storage and Developer-Controlled Servers</h2>
-    <p>FilrAI may store app settings, identifiers, cached filing data, notes, or preferences locally on your device. FilrAI does not require user accounts. Unless a feature states otherwise, FilrAI does not operate a developer-controlled account database for storing your research history.</p>
-    <p>When cloud AI features are used, relevant request content is transmitted outside your device to provide the feature. Support emails and website hosting logs may also be retained by the service providers used to operate support and the website.</p>
+        <h2>Third-Party Services and Data Sources</h2>
+        <p>FilrAI may connect to third-party services to provide app functionality, including:</p>
+        <ul>
+          <li>SEC systems, public filing sources, company investor-relations websites, and market-information sources.</li>
+          <li>Cloud AI model providers used to generate AI-assisted responses.</li>
+          <li>Email and hosting providers used to operate this website and respond to support requests.</li>
+        </ul>
+        <p>Third-party services process information according to their own terms and privacy practices.</p>
 
-    <h2>How Information Is Used</h2>
-    <p>Information is used to provide and improve app functionality, retrieve public filing data, generate AI-assisted responses, troubleshoot issues, respond to support requests, maintain security, and comply with legal obligations.</p>
+        <h2>How Information Is Used</h2>
+        <p>Information is used to provide app functionality, retrieve public filing and company information, generate AI-assisted responses, troubleshoot issues, respond to support requests, maintain security, and comply with legal obligations.</p>
 
-    <h2>Analytics, Advertising, and Tracking</h2>
-    <p>FilrAI does not sell personal information and does not use advertising frameworks. If analytics, crash reporting, or telemetry are added in the future, this policy will be updated to describe what is collected and how it is used.</p>
+        <h2>Analytics, Advertising, and Tracking</h2>
+        <p>FilrAI does not sell personal information, does not use advertising frameworks, and does not track you across apps or websites owned by other companies. FilrAI does not currently use third-party analytics or crash-reporting SDKs. If these practices change, this policy will be updated before those features are used.</p>
 
-    <h2>Retention</h2>
-    <p>Local app data remains on your device until you delete it through the app, your operating system, or by uninstalling FilrAI. Support emails may be retained as needed to respond to requests and maintain business records. Cloud providers may retain request data according to their own policies and service configurations.</p>
+        <h2>Retention and Deletion</h2>
+        <p>Local app data remains on your device until you delete it. Support emails may be retained as needed to respond to requests and maintain ordinary business records. Cloud AI providers and other third-party services may retain request data according to their own policies and service configurations.</p>
+        <p>You can contact support to ask privacy questions or request deletion of support communications associated with your email address.</p>
 
+        <h2>Children's Privacy</h2>
+        <p>FilrAI is not directed to children under 13, and children under 13 should not use FilrAI or submit information through the app. FilrAI does not knowingly collect personal information from children under 13. If you believe a child has used FilrAI, please contact support with questions about any information that may be associated with support communications.</p>
 
-    <h2>Security</h2>
-    <p>FilrAI uses reasonable safeguards, including encrypted network connections where supported by third-party services. No method of transmission or storage is completely secure, so please use care when deciding what to submit.</p>
+        <h2>Security</h2>
+        <p>FilrAI uses reasonable safeguards, including encrypted network connections where supported by third-party services. No method of transmission or storage is completely secure, so please use care when deciding what to submit.</p>
 
+        <h2>Changes to This Policy</h2>
+        <p>This Privacy Policy may be updated as FilrAI features, vendors, or data practices change. The effective date above will be revised when material updates are made.</p>
 
-    <h2>Changes to This Policy</h2>
-    <p>This Privacy Policy may be updated as FilrAI features, vendors, or data practices change. The effective date above will be revised when material updates are made.</p>
+        <h2>Contact</h2>
+        <p>If you have questions about this Privacy Policy, please contact: <a href="mailto:filr.support@gmail.com">filr.support@gmail.com</a>.</p>
 
-    <h2>Contact</h2>
-    <p>If you have questions about this Privacy Policy, please contact: <a href="mailto:filr.support@gmail.com">filr.support@gmail.com</a>.</p>
-
-    <a class="back" href="index.html">← Back to Home</a>
+        <a class="back" href="index.html">&larr; Back to Home</a>
+      </article>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>FilrAI for financial research. Built exclusively for macOS.</span>
+      <nav class="footer-links" aria-label="Legal and support links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
