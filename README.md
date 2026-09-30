@@ -12,13 +12,13 @@ Open http://127.0.0.1:4173/. No install or build step is required.
 
 ## Product screenshots
 
-The five original user-supplied app screenshots are kept in `assets/`. CSS removes the outer screenshot padding for the page presentation. The Filing Tracker section uses a portrait CSS crop of the supplied sidebar capture, showing the watchlist selector, recent filings, and expanded summary. The original captures and their data are unchanged and linked from each figure.
+The five original user-supplied app screenshots are kept in `assets/`. CSS removes the outer screenshot padding for the page presentation. The Filing Tracker section uses a portrait CSS crop of the supplied sidebar capture, showing the watchlist selector, recent filings, and expanded summary. The original captures and their data are retained in assets; screenshot figures do not link to the full images.
 
 The Model Builder screenshot shows the Release layout preview, not a populated in-app workbook. The accompanying copy explains the Excel export workflow.
 
 ## Review before publishing
 
-Check the page at desktop and mobile widths and follow navigation and image links. Privacy and terms wording is preserved; older disclosure URLs still redirect to terms.html. Publish through the existing GitHub Pages workflow after review.
+Check the page at desktop and mobile widths and follow navigation links. Privacy and terms wording is preserved; older disclosure URLs still redirect to terms.html. Publish through the existing GitHub Pages workflow after review.
 
 ## Documentation draft
 
