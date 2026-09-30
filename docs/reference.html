@@ -50,21 +50,23 @@
 <a href="#help-tables-models">Table extraction &amp; Model Builder</a>
 <a href="#help-watchlists-markets">Watchlists, Filing Tracker &amp; Markets</a>
 </nav>
-<h3 id="help-loading">Company search &amp; filing downloads</h3>
-<details class="troubleshooting-item"><summary>Company information will not load</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<details class="troubleshooting-item"><summary>Loading or export failed</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>Couldn’t load the company’s filing information. Please try again.</li>
 <li>The company overview request timed out. Please try again.</li>
 <li>The company overview couldn’t finish. Please try again.</li>
-</ul><p>Check your internet connection, confirm the selected company, and try loading it again. If only one company fails, include its ticker when reporting the issue; if several fail, mention that too.</p></div></details>
+<li>The filing document was empty.</li>
+<li>Failed to decode the filing document.</li>
+<li>Download did not produce a file.</li>
+<li>The uploaded document could not be saved.</li>
+<li>Export failed: …</li>
+<li>Download failed</li>
+</ul><p>For loading failures, check your connection and try opening the original document in a browser. For uploads or exports, use a locally available source file, check free storage, and save to a writable local folder. If the issue persists, <a href="#support">contact support</a> with the exact error and the company or document involved.</p></div></details>
+<h3 id="help-loading">Company search &amp; filing downloads</h3>
 <details class="troubleshooting-item"><summary>A filing request fails</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>Failed to fetch filing document (HTTP …).</li>
 <li>SEC request failed (…).</li>
 </ul><p>Open the original filing on the SEC website to check whether it is available. For HTTP <strong>403</strong> or <strong>429</strong>, wait before retrying; the request may have been blocked or rate-limited. For <strong>404</strong>, return to the company’s filing list and open the filing again. For <strong>5xx</strong>, retry later. Report a persistent failure with the filing URL and status code.</p></div></details>
-<details class="troubleshooting-item"><summary>The filing is empty or cannot be read</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
-<li>The filing document was empty.</li>
-<li>Failed to decode the filing document.</li>
-<li>Download did not produce a file.</li>
-</ul><p>Try opening the filing again. If the original document opens in a browser but still fails in FilrAI, send support its URL and the exact error. A successful download must contain readable document content.</p></div></details>
+
 <details class="troubleshooting-item"><summary>A summary cannot locate the required section</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>Could not locate the business overview section in the annual filing.</li>
 <li>Could not locate the MD&amp;A section in the selected filing.</li>
@@ -76,11 +78,7 @@
 <li>No annual filing (10-K/20-F/40-F) found.</li>
 </ul><p>Confirm that you selected the intended company and check its available filings. This feature needs a supported annual filing; a company without one may still have other documents you can read in the Viewer.</p></div></details>
 <h3 id="help-ai">AI chat, summaries &amp; insights</h3>
-<details class="troubleshooting-item"><summary>AI is cooling down or rate-limited</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
-<li>AI is cooling down. Try again in … seconds.</li>
-<li>AI is temporarily rate-limited. Please try again later.</li>
-<li>Insights update queued until AI is ready.</li>
-</ul><p>Wait for the displayed cooldown to finish before trying again. If an Insights update is marked <strong>queued</strong>, leave it queued rather than repeatedly requesting another update. A rate-limit message without a countdown means you should retry later.</p></div></details>
+
 <details class="troubleshooting-item"><summary>The daily AI limit has been reached</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>AI has reached its daily usage limit. Please try again tomorrow.</li>
 <li>AI has reached the daily limit for this network. Please try again tomorrow.</li>
@@ -112,35 +110,26 @@
 <li>Cloud chat stream stopped before citations were finalized: …</li>
 </ul><p>Check your connection and retry once. For chat, narrow the question or request a shorter answer. For a summary, retry its refresh when available. Treat an interrupted response as incomplete. If the failure repeats, include the feature and exact error in your support report.</p></div></details>
 <h3 id="help-documents">Uploaded documents &amp; IR material</h3>
-<details class="troubleshooting-item"><summary>An upload is not a PDF</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
-<li>Only PDF uploads are supported.</li>
-</ul><p>Choose a PDF file. If your source is another format, export it to PDF in its original app first; changing the filename extension does not convert it.</p></div></details>
+
 <details class="troubleshooting-item"><summary>A document source cannot be found</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>The selected document is not available.</li>
 <li>The uploaded document source is not available.</li>
 <li>The investor relations source copy is not available.</li>
 </ul><p>Confirm that the original file is available locally and can be opened. Download it first if it is only a cloud placeholder. For IR material, reopen the source from the company’s materials list. If needed, import the original PDF again; keep existing notes and annotations until you have checked their source links.</p></div></details>
-<details class="troubleshooting-item"><summary>The uploaded document cannot be saved</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
-<li>The uploaded document could not be saved.</li>
-</ul><p>Check that your Mac has free storage, then retry the upload with a locally available PDF. If it still fails, report the file size and error to support.</p></div></details>
-<details class="troubleshooting-item"><summary>The publication date is invalid</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
-<li>Enter the publication date as MM/DD/YYYY or select N/A.</li>
-</ul><p>Enter the date in <strong>MM/DD/YYYY</strong> format. Select <strong>N/A</strong> if the publication date is unknown.</p></div></details>
+
 <details class="troubleshooting-item"><summary>An IR website blocks or returns the wrong document</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>The investor relations site returned a protection page instead of the document.</li>
 <li>The investor relations download is not a PDF.</li>
 <li>The investor relations material download was empty.</li>
 <li>Failed to download investor relations material (HTTP …).</li>
 </ul><p>Open the company’s original investor relations page in a browser. If the document is available there, download the actual PDF and import it into FilrAI. Some sites return a webpage or access-check page instead of the requested file. For a temporary server error, try again later.</p></div></details>
-<details class="troubleshooting-item"><summary>An IR snapshot fails or the document is too large</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<details class="troubleshooting-item"><summary>An IR snapshot fails</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>Failed to create a PDF snapshot of this investor relations page.</li>
-<li>The investor relations document exceeds the 2 GB size limit.</li>
-</ul><p>For a snapshot failure, use the company’s original PDF when available. For the size-limit message, choose a smaller source document below <strong>2 GB</strong>. Include the original material URL when reporting a repeated snapshot failure.</p></div></details>
+</ul><p>Use the company’s original PDF when available. Include the original material URL when reporting a repeated snapshot failure.</p></div></details>
 <h3 id="help-annotations">Annotations &amp; citation links</h3>
-<details class="troubleshooting-item"><summary>A note has no text selection</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
-<li>Select text in the document before creating a note.</li>
+<details class="troubleshooting-item"><summary>A PDF selection cannot be anchored</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>The selected PDF text could not be anchored.</li>
-</ul><p>Select text in the document before creating the annotation. If a PDF selection cannot be anchored, try selecting a shorter, continuous block of text. Check that the PDF contains selectable text rather than only an image.</p></div></details>
+</ul><p>Try selecting a shorter, continuous block of text. Check that the PDF contains selectable text rather than only an image.</p></div></details>
 <details class="troubleshooting-item"><summary>A citation cannot jump to its source</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>Citation unavailable</li>
 <li>The quoted text could not be located in this PDF. You can still read the excerpt in Chat.</li>
@@ -153,11 +142,10 @@
 <li>The selected region is too small or invalid.</li>
 <li>Could not capture the selected content region.</li>
 </ul><p>Wait for the document to finish displaying, then use <strong>Extract table</strong> to select a complete table region with visible rows and columns. Increase the zoom if the text is very small and retry the selection. Check the extracted values and column alignment before copying them into your spreadsheet.</p></div></details>
-<details class="troubleshooting-item"><summary>The model needs a ticker or supported filings</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
-<li>Please enter a ticker.</li>
+<details class="troubleshooting-item"><summary>No supported model filings are available</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>No annual filings (10-K/20-F/40-F) found for ….</li>
 <li>No annual/interim model filings found for ….</li>
-</ul><p>Enter a ticker and confirm the selected company. If no model filings are found, check which annual and interim filings are available for that company. A model can only be built from supported filings available for the requested periods.</p></div></details>
+</ul><p>Check which annual and interim filings are available for the selected company. A model can only be built from supported filings available for the requested periods.</p></div></details>
 <details class="troubleshooting-item"><summary>Interim models are unavailable</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>Interim-period models are currently unavailable for foreign issuers. Select AA to build an annual model.</li>
 <li>Interim-period availability could not be verified. Select AA to build an annual model.</li>
@@ -165,27 +153,14 @@
 <details class="troubleshooting-item"><summary>The XBRL model cannot be loaded</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>Failed to load XBRL model for ….</li>
 </ul><p>Retry after checking your connection. If the same company continues to fail, report its ticker, build mode, historical-year selection, and any filing shown in the build status. You can still review the original statements in the Viewer; a readable filing does not guarantee that its structured data can be used to build a model.</p></div></details>
-<details class="troubleshooting-item"><summary>There is no workbook to export</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
-<li>No workbook is available to export.</li>
-</ul><p>Select <strong>Build</strong> and wait for it to complete successfully before exporting. Resolve any build error first. If you change the build configuration, rebuild the workbook before exporting the updated model.</p></div></details>
-<details class="troubleshooting-item"><summary>A file export fails</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
-<li>Export failed: …</li>
-<li>Download failed</li>
-</ul><p>Retry the export to a writable local folder with a new filename, and check available storage. If the error mentions an HTTP status, follow the <a href="#help-loading">filing download guidance</a>. If it refers to an unavailable source, reopen the source document first. Report the export format and full error if it persists.</p></div></details>
+
 <h3 id="help-watchlists-markets">Watchlists, Filing Tracker &amp; Markets</h3>
-<details class="troubleshooting-item"><summary>A watchlist name or selection is invalid</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
-<li>Enter a name for the watchlist.</li>
-<li>A watchlist named … already exists.</li>
-<li>That watchlist is no longer available.</li>
-<li>Keep at least one watchlist.</li>
-</ul><p>Enter a non-empty, unique name. If a watchlist is no longer available, select an existing one. Create another watchlist before deleting the last remaining list.</p></div></details>
+
 <details class="troubleshooting-item"><summary>A ticker cannot be added</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
-<li>Enter a ticker before adding it to the watchlist.</li>
 <li>… is not supported by the live Watchlist yet.</li>
 <li>This ticker is missing a supported exchange for TradingView.</li>
-<li>Search for a company or ticker before adding it to the Tracker.</li>
 <li>Couldn’t resolve … to a filing Tracker company.</li>
-</ul><p>Search for the company and confirm its ticker before adding it. The live Watchlist needs a supported exchange mapping; the Filing Tracker needs a company that can be resolved to SEC filings. If the ticker is correct but still fails, send support its name, ticker, exchange, and whether you were using the Watchlist or Tracker.</p></div></details>
+</ul><p>The live Watchlist needs a supported exchange mapping; the Filing Tracker needs a company that can be resolved to SEC filings. If the ticker is correct but still fails, send support its name, ticker, exchange, and whether you were using the Watchlist or Tracker.</p></div></details>
 <details class="troubleshooting-item"><summary>Market data will not load</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>FRED data returned HTTP …</li>
 <li>FX data returned HTTP …</li>
