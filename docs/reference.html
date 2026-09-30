@@ -63,27 +63,17 @@
 <details class="troubleshooting-item"><summary>A summary cannot locate the required section</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>Could not locate the business overview section in the annual filing.</li>
 <li>Could not locate the MD&amp;A section in the selected filing.</li>
-<li>Failed to map filing sections: …</li>
-<li>Extracted business section too short …</li>
-<li>Extracted MD&amp;A section too short …</li>
 </ul><p>FilrAI could not identify enough source text for this summary. Open the filing in the <strong>Viewer</strong> and use its outline or search to review the section directly. If the section is present, report the filing URL so its structure can be investigated.</p></div></details>
 <details class="troubleshooting-item"><summary>No annual filing is available</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>No annual filing (10-K/20-F/40-F) found.</li>
 </ul><p>Confirm that you selected the intended company and check its available filings. This feature needs a supported annual filing; a company without one may still have other documents you can read in the Viewer.</p></div></details>
 <h3 id="help-ai">AI chat, summaries &amp; insights</h3>
 
-<details class="troubleshooting-item"><summary>The daily AI limit has been reached</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
-<li>AI has reached its daily usage limit. Please try again tomorrow.</li>
-<li>AI has reached the daily limit for this network. Please try again tomorrow.</li>
-</ul><p>Wait for the daily limit to reset. The network message applies to requests from your network, which may be shared with other users. Restarting the app does not reset these service limits.</p></div></details>
-<details class="troubleshooting-item"><summary>An AI feature is paused or unavailable</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<details class="troubleshooting-item"><summary>AI is temporarily unavailable</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>This AI feature is temporarily paused.</li>
 <li>AI web research is temporarily paused.</li>
 <li>AI access is currently unavailable.</li>
-<li>AI settings are unavailable.</li>
-<li>Invalid AI refresh settings.</li>
-<li>AI is temporarily unavailable because its service settings need attention.</li>
-</ul><p>Try the feature again later. These messages concern service availability, access, or settings supplied by the service. If the issue persists, contact support with the feature name and exact message.</p></div></details>
+</ul><p>Try the feature again later. If it remains unavailable, contact support with the feature name and exact message.</p></div></details>
 <details class="troubleshooting-item"><summary>The request is too large</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>This request exceeds the current AI input limit. Try a shorter question or conversation.</li>
 <li>This request exceeds the current AI input limit. Try using less document context.</li>
@@ -99,9 +89,7 @@
 <li>AI returned an empty response. Please try again.</li>
 <li>AI returned a response that could not be read. Please try again.</li>
 <li>The AI response reached its length limit before finishing. Please try refreshing again.</li>
-<li>Cloud chat failed: …</li>
-<li>Cloud chat stream stopped before citations were finalized: …</li>
-</ul><p>Check your connection and retry once. For chat, narrow the question or request a shorter answer. For a summary, retry its refresh when available. Treat an interrupted response as incomplete. If the failure repeats, include the feature and exact error in your support report.</p></div></details>
+</ul><p>Check your connection and retry once. For chat, narrow the question or request a shorter answer. For a summary, retry its refresh when available. If an answer stops before finishing, retry to get a complete response. If the failure repeats, include the feature and exact error in your support report.</p></div></details>
 <h3 id="help-documents">Uploaded documents &amp; IR material</h3>
 
 <details class="troubleshooting-item"><summary>A document source cannot be found</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
@@ -151,16 +139,13 @@
 
 <details class="troubleshooting-item"><summary>A ticker cannot be added</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>… is not supported by the live Watchlist yet.</li>
-<li>This ticker is missing a supported exchange for TradingView.</li>
 <li>Couldn’t resolve … to a filing Tracker company.</li>
-</ul><p>The live Watchlist needs a supported exchange mapping; the Filing Tracker needs a company that can be resolved to SEC filings. If the ticker is correct but still fails, send support its name, ticker, exchange, and whether you were using the Watchlist or Tracker.</p></div></details>
+</ul><p>The ticker may not currently be supported in the Watchlist, or a matching SEC company may not be available for the Filing Tracker. If the ticker is correct but still fails, send support its name, ticker, exchange, and whether you were using the Watchlist or Tracker.</p></div></details>
 <details class="troubleshooting-item"><summary>Market data will not load</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
 <li>FRED data returned HTTP …</li>
 <li>FX data returned HTTP …</li>
-<li>Failed to decode FRED data: …</li>
-<li>Failed to decode the FX currency catalog: …</li>
 <li>No observations</li>
-</ul><p>Check your connection and try loading the data again. HTTP or decoding errors can indicate a provider or service response problem. <strong>No observations</strong> means no usable values were returned for that request; it does not mean the value is zero. If the problem persists, include the series or currency pair and exact message.</p></div></details>
+</ul><p>Check your connection and try loading the data again. The data provider may be temporarily unavailable. <strong>No observations</strong> means no usable values were returned for that request; it does not mean the value is zero. If the problem persists, include the series or currency pair and exact message.</p></div></details>
 <p>Still stuck, or seeing a different message? <a href="#support">Contact support</a> with the exact error and the steps that led to it.</p></section>
 <section class="docs-section workspace-docs" id="support">
 <h2><a href="#support">Contacting support<span class="section-hash" aria-hidden="true"> #</span></a></h2>
