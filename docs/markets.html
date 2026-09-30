@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Market performance, currencies, and economic data.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../icon_512.png">
+<link rel="stylesheet" href="../page.css?v=20260910-docs">
+<link rel="stylesheet" href="docs.css?v=20260924-updated-dates">
+<title>Markets — FilrAI Documentation</title>
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary navigation">
+<a class="brand" href="../index.html" aria-label="FilrAI home"><img src="../icon_512.png" alt="" width="36" height="36"><span>FilrAI</span></a>
+<div class="nav-links"><a href="index.html" aria-current="true">Documentation</a><a href="../support.html">Support</a></div>
+</nav></header>
+<div class="docs-layout">
+<aside class="docs-sidebar"><a class="docs-label" href="index.html">Documentation</a><nav aria-label="Documentation chapters"><a href="index.html">Welcome</a><a href="getting-started.html">Getting started</a><a href="overview.html">Overview</a><a href="markets.html" aria-current="page">Markets</a><a href="watchlists-tracker.html">Watchlists &amp; Filing Tracker</a><a href="filings.html">Filings</a><a href="viewer.html">Document Viewer</a><a href="notes.html">Notes</a><a href="model-builder.html">Model Builder</a><a href="reference.html">Reference &amp; troubleshooting</a></nav></aside>
+<details class="docs-mobile-menu"><summary>Documentation chapters</summary><nav aria-label="Documentation chapters"><a href="index.html">Welcome</a><a href="getting-started.html">Getting started</a><a href="overview.html">Overview</a><a href="markets.html" aria-current="page">Markets</a><a href="watchlists-tracker.html">Watchlists &amp; Filing Tracker</a><a href="filings.html">Filings</a><a href="viewer.html">Document Viewer</a><a href="notes.html">Notes</a><a href="model-builder.html">Model Builder</a><a href="reference.html">Reference &amp; troubleshooting</a></nav></details>
+<main id="main" class="docs-main">
+<header class="docs-heading"><p class="docs-kicker">FilrAI Documentation</p><h1>Markets</h1><p class="docs-intro">Market performance, currencies, and economic data.</p><p class="docs-updated">Last updated <time datetime="2026-09-11">September 11, 2026</time></p></header>
+<nav class="docs-toc" aria-label="On this page"><h2>On this page</h2><ul><li><a href="#heatmap">Market heatmap</a></li><li><a href="#exchange-rates">Exchange rates</a></li><li><a href="#macro">Macro indicators</a></li><li><a href="#calendar">Economic calendar</a></li><li><a href="#data">Sources &amp; refresh behavior</a></li></ul></nav><section class="docs-section heatmap-docs" id="heatmap">
+<h2><a href="#heatmap">Market heatmap<span class="section-hash" aria-hidden="true"> #</span></a></h2>
+<p>The default view displays the S&amp;P 500, grouped by sector and sized by market capitalization.</p>
+<p>Use the toolbar to change the index, sizing metric, performance period, or grouping. Hold <strong>⌥ Option</strong> while scrolling to zoom.</p>
+<figure class="docs-figure heatmap-figure"><a class="docs-image-link" href="../assets/docs/markets-heatmap.png" target="_blank" rel="noopener" aria-label="Enlarge Market heatmap screenshot (opens in a new tab)"><div class="docs-image-crop heatmap-crop"><img src="../assets/docs/markets-heatmap.png" width="3248" height="2004" loading="lazy" decoding="async" alt="S&amp;P 500 heatmap grouped by sector, sized by market capitalization, and colored by one-day percentage change, with its toolbar and color scale."></div></a><figcaption><span>S&amp;P 500 heatmap with sector grouping.</span><a href="../assets/docs/markets-heatmap.png" target="_blank" rel="noopener">View full screenshot ↗</a></figcaption></figure>
+</section>
+<section class="docs-section markets-reference-docs" id="exchange-rates"><h2><a href="#exchange-rates">Exchange rates<span class="section-hash" aria-hidden="true"> #</span></a></h2>
+<p>Daily ECB reference rates with one-year trends. Cross rates are calculated from the ECB’s euro-based rates.</p>
+<figure class="docs-figure markets-fx-figure"><a class="docs-image-link" href="../assets/docs/markets-dashboard.png" target="_blank" rel="noopener" aria-label="Enlarge Exchange rates and cross rates screenshot (opens in a new tab)"><div class="docs-image-crop markets-fx-crop"><img src="../assets/docs/markets-dashboard.png" width="3248" height="2004" loading="lazy" decoding="async" alt="Exchange Rates showing key currency pairs, cross rates, one-year trends, daily changes, and the ECB publication dates."></div></a><figcaption><span>Exchange rates and cross rates.</span><a href="../assets/docs/markets-dashboard.png" target="_blank" rel="noopener">View full screenshot ↗</a></figcaption></figure>
+</section>
+<section class="docs-section markets-reference-docs" id="macro"><h2><a href="#macro">Macro indicators<span class="section-hash" aria-hidden="true"> #</span></a></h2>
+<p>Rates, inflation, labor, and commodity indicators from FRED.</p><figure class="docs-figure markets-macro-figure"><a class="docs-image-link" href="../assets/docs/markets-dashboard.png" target="_blank" rel="noopener" aria-label="Enlarge Macro Dashboard screenshot (opens in a new tab)"><div class="docs-image-crop markets-macro-crop"><img src="../assets/docs/markets-dashboard.png" width="3248" height="2004" loading="lazy" decoding="async" alt="Macro Dashboard showing Treasury yields, Fed Funds, SOFR, PPI, CPI, unemployment, payrolls, WTI crude, and copper."></div></a><figcaption><span>Macro Dashboard.</span><a href="../assets/docs/markets-dashboard.png" target="_blank" rel="noopener">View full screenshot ↗</a></figcaption></figure><div class="markets-table-wrap"><table class="markets-reference-table"><caption>Indicator definitions and units</caption><thead><tr><th scope="col">Indicator</th><th scope="col">Measure</th></tr></thead><tbody><tr><th scope="row">10Y / 2Y Treasury</th><td>Constant-maturity yields.</td></tr><tr><th scope="row">Fed Funds / SOFR</th><td>Effective federal funds rate and secured overnight financing rate.</td></tr><tr><th scope="row">PPI / CPI</th><td>Year-over-year percentage change; PPI covers final demand.</td></tr><tr><th scope="row">Unemployment</th><td>Civilian unemployment rate.</td></tr><tr><th scope="row">Payrolls</th><td>Total nonfarm employment, in thousands.</td></tr><tr><th scope="row">WTI Crude</th><td>Cushing spot price, in USD per barrel.</td></tr><tr><th scope="row">Copper</th><td>Monthly price, in USD per metric ton.</td></tr></tbody></table></div><p>“As of” dates identify the latest available observation for each series. Monthly series can show the first day of the observation month rather than the release date.</p>
+</section>
+<section class="docs-section markets-reference-docs" id="calendar"><h2><a href="#calendar">Economic calendar<span class="section-hash" aria-hidden="true"> #</span></a></h2>
+<p>Up to 12 upcoming releases from FRED, covering employment, inflation, GDP, retail sales, industrial production, personal income, and housing. Entries are ordered by date and include the full release name.</p><figure class="docs-figure markets-calendar-figure"><a class="docs-image-link" href="../assets/docs/markets-dashboard.png" target="_blank" rel="noopener" aria-label="Enlarge Upcoming economic releases screenshot (opens in a new tab)"><div class="docs-image-crop markets-calendar-crop"><img src="../assets/docs/markets-dashboard.png" width="3248" height="2004" loading="lazy" decoding="async" alt="Economic Calendar showing scheduled CPI, retail sales, housing, industrial production, and GDP-related releases."></div></a><figcaption><span>Upcoming economic releases.</span><a href="../assets/docs/markets-dashboard.png" target="_blank" rel="noopener">View full screenshot ↗</a></figcaption></figure>
+</section>
+<section class="docs-section markets-reference-docs" id="data"><h2><a href="#data">Sources &amp; refresh behavior<span class="section-hash" aria-hidden="true"> #</span></a></h2>
+<p>Exchange rates use ECB reference data; macro indicators and calendar dates come from FRED.</p>
+<p>These panels refresh every six hours. Returning to Markets also checks for a refresh when the previous update is at least six hours old. Observation dates follow each source’s publication schedule.</p>
+</section>
+<nav class="chapter-pagination" aria-label="Chapter navigation"><a href="overview.html"><span>Previous</span>Overview</a><a href="watchlists-tracker.html"><span>Next</span>Watchlists &amp; Filing Tracker</a></nav>
+</main></div>
+<footer class="footer"><div class="footer-inner"><a class="brand" href="../index.html"><img src="../icon_512.png" alt="" width="32" height="32"><span>FilrAI</span></a><nav class="footer-links" aria-label="Legal and support links"><a href="index.html">Documentation</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../support.html">Support</a></nav></div></footer>
+</body></html>

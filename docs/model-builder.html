@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Build financial statement workbooks and valuation templates from company filings.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../icon_512.png">
+<link rel="stylesheet" href="../page.css?v=20260910-docs">
+<link rel="stylesheet" href="docs.css?v=20260924-updated-dates">
+<title>Model Builder — FilrAI Documentation</title>
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary navigation">
+<a class="brand" href="../index.html" aria-label="FilrAI home"><img src="../icon_512.png" alt="" width="36" height="36"><span>FilrAI</span></a>
+<div class="nav-links"><a href="index.html" aria-current="true">Documentation</a><a href="../support.html">Support</a></div>
+</nav></header>
+<div class="docs-layout">
+<aside class="docs-sidebar"><a class="docs-label" href="index.html">Documentation</a><nav aria-label="Documentation chapters"><a href="index.html">Welcome</a><a href="getting-started.html">Getting started</a><a href="overview.html">Overview</a><a href="markets.html">Markets</a><a href="watchlists-tracker.html">Watchlists &amp; Filing Tracker</a><a href="filings.html">Filings</a><a href="viewer.html">Document Viewer</a><a href="notes.html">Notes</a><a href="model-builder.html" aria-current="page">Model Builder</a><a href="reference.html">Reference &amp; troubleshooting</a></nav></aside>
+<details class="docs-mobile-menu"><summary>Documentation chapters</summary><nav aria-label="Documentation chapters"><a href="index.html">Welcome</a><a href="getting-started.html">Getting started</a><a href="overview.html">Overview</a><a href="markets.html">Markets</a><a href="watchlists-tracker.html">Watchlists &amp; Filing Tracker</a><a href="filings.html">Filings</a><a href="viewer.html">Document Viewer</a><a href="notes.html">Notes</a><a href="model-builder.html" aria-current="page">Model Builder</a><a href="reference.html">Reference &amp; troubleshooting</a></nav></details>
+<main id="main" class="docs-main">
+<header class="docs-heading"><p class="docs-kicker">FilrAI Documentation <span class="draft-badge">Draft</span></p><h1>Model Builder</h1><p class="docs-intro">Build financial statement workbooks and valuation templates from company filings.</p><p class="docs-updated">Last updated <time datetime="2026-09-18">September 18, 2026</time></p></header>
+<nav class="docs-toc" aria-label="On this page"><h2>On this page</h2><ul><li><a href="#configuration">Build configuration</a></li><li><a href="#preview-export">3 Statement Model</a></li><li><a href="#valuation-templates">Valuation templates</a></li></ul></nav>
+<figure class="docs-figure"><a class="docs-image-link" href="../assets/docs/model-builder-workspace.png?v=five-years-lbo" target="_blank" rel="noopener" aria-label="Enlarge Model Builder screenshot (opens in a new tab)"><div class="docs-image-crop model-builder-workspace-crop"><img src="../assets/docs/model-builder-workspace.png?v=five-years-lbo" width="3248" height="2122" loading="lazy" decoding="async" alt="Model Builder configured for Apple with AA mode, five historical years, ten forecast years, Leveraged Buyout selected, and Bold subtotals enabled."></div></a><figcaption><span>Model Builder configuration and workbook layout preview.</span><a href="../assets/docs/model-builder-workspace.png?v=five-years-lbo" target="_blank" rel="noopener">View full screenshot ↗</a></figcaption></figure>
+<section class="docs-section workspace-docs" id="configuration">
+<h2><a href="#configuration">Build configuration<span class="section-hash" aria-hidden="true"> #</span></a></h2>
+<p>Search by company name or ticker, then configure the workbook.</p>
+<h3 id="models-modes">Model</h3>
+<p>The <strong>3 Statement Model</strong> includes the income statement, balance sheet, and cash flow statement. Add <strong>Discounted Cash Flow</strong> for WACC and valuation tables, or <strong>Leveraged Buyout</strong> for transaction assumptions, sources and uses, an operating case, a debt schedule, and sponsor returns.</p>
+<h3 id="periods">Build mode &amp; periods</h3>
+<p><strong>AA</strong> combines annual historical periods with annual forecast columns. <strong>IAIA</strong> includes interim and annual historical periods, with quarterly forecasts before annual forecasts.</p>
+<p>Choose <strong>3, 5, or 10</strong> historical years and <strong>1–20</strong> forecast years. In IAIA mode, set how many forecast years include quarterly periods.</p>
+<h3 id="formatting">Formatting &amp; output</h3>
+<p>Set the header color, <strong>Bold subtotals</strong>, or <strong>Split by statement</strong> for separate statement worksheets. Selecting a <strong>DCF</strong> or <strong>LBO</strong> template disables <strong>Split by statement</strong>.</p>
+<h3 id="preview">Preview</h3>
+<p>The preview reflects your configuration, with placeholder rows and values.</p>
+</section>
+<section class="docs-section workspace-docs" id="preview-export">
+<h2><a href="#preview-export">3 Statement Model<span class="section-hash" aria-hidden="true"> #</span></a></h2>
+<p>Contains formatted financial statements including the <strong>income statement</strong>, <strong>balance sheet</strong>, and <strong>cash flow statement</strong>. Historical figures are derived from XBRL data in the company’s SEC filings and organized across the selected historical periods. The workbook also includes forecast columns for your projections.</p>
+<p class="docs-disclaimer">Figures that could not be merged across periods are retained at the bottom of the relevant statement in the red <strong>Unmerged / Needs Review</strong> section.</p>
+<figure class="docs-figure"><a class="docs-image-link" href="../assets/docs/model-builder-export.png?v=no-workbook-banner" target="_blank" rel="noopener" aria-label="Enlarge workbook screenshot (opens in a new tab)"><div class="docs-image-crop model-builder-workspace-crop"><img src="../assets/docs/model-builder-export.png?v=no-workbook-banner" width="3248" height="2122" loading="lazy" decoding="async" alt="Apple’s exported three-statement model in Excel, with historical financial figures and forecast columns."></div></a><figcaption><span>Exported three-statement model in Excel.</span><a href="../assets/docs/model-builder-export.png?v=no-workbook-banner" target="_blank" rel="noopener">View full screenshot ↗</a></figcaption></figure>
+</section>
+<section class="docs-section workspace-docs" id="valuation-templates">
+<h2><a href="#valuation-templates">Valuation templates<span class="section-hash" aria-hidden="true"> #</span></a></h2>
+<p>Select Discounted Cash Flow or Leveraged Buyout in the build configuration to include its template alongside the three-statement model.</p>
+<h3>Discounted Cash Flow</h3>
+<p>A template for cash-flow projections, WACC, and valuation.</p>
+<figure class="docs-figure"><a class="docs-image-link" href="../assets/docs/model-builder-dcf-template.png?v=no-workbook-banner" target="_blank" rel="noopener" aria-label="Enlarge workbook screenshot (opens in a new tab)"><div class="docs-image-crop model-builder-workspace-crop"><img src="../assets/docs/model-builder-dcf-template.png?v=no-workbook-banner" width="3248" height="2122" loading="lazy" decoding="async" alt="DCF template in Excel with cash-flow projections, WACC inputs, and a valuation table."></div></a><figcaption><span>Discounted Cash Flow template.</span><a href="../assets/docs/model-builder-dcf-template.png?v=no-workbook-banner" target="_blank" rel="noopener">View full screenshot ↗</a></figcaption></figure>
+<h3>Leveraged Buyout</h3>
+<p>A template for transaction assumptions, sources and uses, an operating case, a debt schedule, and sponsor returns.</p>
+<figure class="docs-figure"><a class="docs-image-link" href="../assets/docs/model-builder-lbo-template.png?v=no-workbook-banner" target="_blank" rel="noopener" aria-label="Enlarge workbook screenshot (opens in a new tab)"><div class="docs-image-crop model-builder-workspace-crop"><img src="../assets/docs/model-builder-lbo-template.png?v=no-workbook-banner" width="3248" height="2122" loading="lazy" decoding="async" alt="LBO template in Excel with transaction assumptions, sources and uses, an operating case, and a debt schedule."></div></a><figcaption><span>Leveraged Buyout template.</span><a href="../assets/docs/model-builder-lbo-template.png?v=no-workbook-banner" target="_blank" rel="noopener">View full screenshot ↗</a></figcaption></figure>
+</section>
+<details class="model-reference workspace-docs">
+<summary>Workbook reference — in progress</summary>
+<p>These topics are being prepared.</p>
+<h3 id="workbook">Workbook structure</h3><p>Statements, worksheet organization, and links between financial statements.</p>
+<h3 id="dcf-methodology">DCF methodology</h3><p>Cash-flow construction, discount rates, terminal value, and the enterprise-to-equity bridge.</p>
+<h3 id="inputs-conventions">Inputs &amp; conventions</h3><p>Sourced historical figures, formulas, user-supplied assumptions, units, and signs.</p>
+<h3 id="limitations">Missing data &amp; limitations</h3><p>Unavailable historical data, output limitations, and items to review after export.</p>
+</details>
+<nav class="chapter-pagination" aria-label="Chapter navigation"><a href="notes.html"><span>Previous</span>Notes</a><a href="reference.html"><span>Next</span>Reference &amp; troubleshooting</a></nav>
+</main></div>
+<footer class="footer"><div class="footer-inner"><a class="brand" href="../index.html"><img src="../icon_512.png" alt="" width="32" height="32"><span>FilrAI</span></a><nav class="footer-links" aria-label="Legal and support links"><a href="index.html">Documentation</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../support.html">Support</a></nav></div></footer>
+</body></html>

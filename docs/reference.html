@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shared settings, data details, and help with common issues.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../icon_512.png">
+<link rel="stylesheet" href="../page.css?v=20260910-docs">
+<link rel="stylesheet" href="docs.css?v=20260929-troubleshooting">
+<title>Reference &amp; troubleshooting — FilrAI Documentation</title>
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav" aria-label="Primary navigation">
+<a class="brand" href="../index.html" aria-label="FilrAI home"><img src="../icon_512.png" alt="" width="36" height="36"><span>FilrAI</span></a>
+<div class="nav-links"><a href="index.html" aria-current="true">Documentation</a><a href="../support.html">Support</a></div>
+</nav></header>
+<div class="docs-layout">
+<aside class="docs-sidebar"><a class="docs-label" href="index.html">Documentation</a><nav aria-label="Documentation chapters"><a href="index.html">Welcome</a><a href="getting-started.html">Getting started</a><a href="overview.html">Overview</a><a href="markets.html">Markets</a><a href="watchlists-tracker.html">Watchlists &amp; Filing Tracker</a><a href="filings.html">Filings</a><a href="viewer.html">Document Viewer</a><a href="notes.html">Notes</a><a href="model-builder.html">Model Builder</a><a href="reference.html" aria-current="page">Reference &amp; troubleshooting</a></nav></aside>
+<details class="docs-mobile-menu"><summary>Documentation chapters</summary><nav aria-label="Documentation chapters"><a href="index.html">Welcome</a><a href="getting-started.html">Getting started</a><a href="overview.html">Overview</a><a href="markets.html">Markets</a><a href="watchlists-tracker.html">Watchlists &amp; Filing Tracker</a><a href="filings.html">Filings</a><a href="viewer.html">Document Viewer</a><a href="notes.html">Notes</a><a href="model-builder.html">Model Builder</a><a href="reference.html" aria-current="page">Reference &amp; troubleshooting</a></nav></details>
+<main id="main" class="docs-main">
+<header class="docs-heading"><p class="docs-kicker">FilrAI Documentation <span class="draft-badge">Draft</span></p><h1>Reference &amp; troubleshooting</h1><p class="docs-intro">Shared settings, data details, and help with common issues.</p><p class="docs-updated">Last updated <time datetime="2026-09-29">September 29, 2026</time></p></header>
+<p class="docs-draft-note">General settings and troubleshooting are documented below. The keyboard shortcut overview, data coverage, and storage reference are still being prepared.</p><nav class="docs-toc" aria-label="On this page"><h2>On this page</h2><ul><li><a href="#shortcuts">Keyboard shortcuts</a></li><li><a href="#settings">Settings &amp; preferences</a></li><li><a href="#data-coverage">Data providers &amp; coverage</a></li><li><a href="#storage-ai">Local storage &amp; AI processing</a></li><li><a href="#troubleshooting">Troubleshooting</a></li><li><a href="#support">Contacting support</a></li></ul></nav><section class="docs-section" id="shortcuts"><h2><a href="#shortcuts">Keyboard shortcuts<span class="section-hash" aria-hidden="true"> #</span></a></h2><p class="coverage-label">Planned coverage</p><p>A route to the Viewer’s dedicated shortcut reference.</p><a class="docs-inline-link" href="viewer.html#keyboard-shortcuts">Go to Viewer keyboard shortcuts →</a></section><section class="docs-section workspace-docs" id="settings">
+<h2><a href="#settings">Settings &amp; preferences<span class="section-hash" aria-hidden="true"> #</span></a></h2>
+<p>Open <strong>Settings</strong> from the app menu, or press <kbd>⌘,</kbd>. The <strong>General</strong> tab controls appearance, new-document defaults, and the Filing Tracker notification badge. Changes take effect immediately.</p>
+<figure class="docs-figure settings-general-figure">
+<a class="docs-image-link" href="../assets/docs/settings-general.png" target="_blank" rel="noopener" aria-label="Enlarge General settings screenshot (opens in a new tab)">
+<div class="docs-image-crop settings-general-crop"><img src="../assets/docs/settings-general.png" width="1264" height="1294" loading="lazy" decoding="async" alt="General settings with System, Light, and Dark themes, default document zoom, an XBRL facts toggle for new tabs, and notification badge behavior."></div></a>
+<figcaption><span>General settings. Changes apply immediately.</span><a href="../assets/docs/settings-general.png" target="_blank" rel="noopener">View full screenshot ↗</a></figcaption>
+</figure>
+<h3>Appearance</h3>
+<p><strong>Theme</strong> offers <strong>System</strong>, <strong>Light</strong>, and <strong>Dark</strong>. System follows your macOS appearance automatically; Light and Dark keep FilrAI in the selected appearance.</p>
+<h3>Document Viewer</h3>
+<p><strong>Default Document Zoom</strong> sets the opening zoom for new documents, from <strong>50% to 250%</strong> in 10-percentage-point steps. Restored windows keep their saved zoom.</p>
+<p><strong>Enable XBRL facts in new tabs</strong> turns on fact highlighting and inspection when opening a new filing. Reopened tabs keep their saved setting. You can also show or hide fact highlights in the Viewer’s <a href="viewer.html#xbrl-facts">XBRL facts sidebar</a>.</p>
+<h3>Notifications</h3>
+<p><strong>Clear notification badge</strong> controls when the Filing Tracker’s bell indicator clears:</p>
+<ul>
+<li><strong>When all filings are read:</strong> the indicator stays visible while any tracked filing is unread.</li>
+<li><strong>When Tracker is opened:</strong> opening the Tracker acknowledges the current alerts and clears the indicator. Individual filings retain their read or unread status.</li>
+</ul>
+</section><section class="docs-section" id="data-coverage"><h2><a href="#data-coverage">Data providers &amp; coverage<span class="section-hash" aria-hidden="true"> #</span></a></h2><p class="coverage-label">Planned coverage</p><p>Providers, coverage boundaries, and source-specific limitations.</p></section><section class="docs-section" id="storage-ai"><h2><a href="#storage-ai">Local storage &amp; AI processing<span class="section-hash" aria-hidden="true"> #</span></a></h2><p class="coverage-label">Planned coverage</p><p>Saved app data and which features use cloud AI processing.</p></section><section class="docs-section workspace-docs" id="troubleshooting">
+<h2><a href="#troubleshooting">Troubleshooting<span class="section-hash" aria-hidden="true"> #</span></a></h2>
+<nav class="workspace-contents" aria-label="Troubleshooting topics">
+<a href="#help-loading">Company search &amp; filing downloads</a>
+<a href="#help-ai">AI chat, summaries &amp; insights</a>
+<a href="#help-documents">Uploaded documents &amp; IR material</a>
+<a href="#help-annotations">Annotations &amp; citation links</a>
+<a href="#help-tables-models">Table extraction &amp; Model Builder</a>
+<a href="#help-watchlists-markets">Watchlists, Filing Tracker &amp; Markets</a>
+</nav>
+<h3 id="help-loading">Company search &amp; filing downloads</h3>
+<details class="troubleshooting-item"><summary>Company information will not load</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Couldn’t load the company’s filing information. Please try again.</li>
+<li>The company overview request timed out. Please try again.</li>
+<li>The company overview couldn’t finish. Please try again.</li>
+</ul><p>Check your internet connection, confirm the selected company, and try loading it again. If only one company fails, include its ticker when reporting the issue; if several fail, mention that too.</p></div></details>
+<details class="troubleshooting-item"><summary>A filing request fails</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Failed to fetch filing document (HTTP …).</li>
+<li>SEC request failed (…).</li>
+</ul><p>Open the original filing on the SEC website to check whether it is available. For HTTP <strong>403</strong> or <strong>429</strong>, wait before retrying; the request may have been blocked or rate-limited. For <strong>404</strong>, return to the company’s filing list and open the filing again. For <strong>5xx</strong>, retry later. Report a persistent failure with the filing URL and status code.</p></div></details>
+<details class="troubleshooting-item"><summary>The filing is empty or cannot be read</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>The filing document was empty.</li>
+<li>Failed to decode the filing document.</li>
+<li>Download did not produce a file.</li>
+</ul><p>Try opening the filing again. If the original document opens in a browser but still fails in FilrAI, send support its URL and the exact error. A successful download must contain readable document content.</p></div></details>
+<details class="troubleshooting-item"><summary>A summary cannot locate the required section</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Could not locate the business overview section in the annual filing.</li>
+<li>Could not locate the MD&amp;A section in the selected filing.</li>
+<li>Failed to map filing sections: …</li>
+<li>Extracted business section too short …</li>
+<li>Extracted MD&amp;A section too short …</li>
+</ul><p>FilrAI could not identify enough source text for this summary. Open the filing in the <strong>Viewer</strong> and use its outline or search to review the section directly. If the section is present, report the filing URL so its structure can be investigated.</p></div></details>
+<details class="troubleshooting-item"><summary>No annual filing is available</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>No annual filing (10-K/20-F/40-F) found.</li>
+</ul><p>Confirm that you selected the intended company and check its available filings. This feature needs a supported annual filing; a company without one may still have other documents you can read in the Viewer.</p></div></details>
+<h3 id="help-ai">AI chat, summaries &amp; insights</h3>
+<details class="troubleshooting-item"><summary>AI is cooling down or rate-limited</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>AI is cooling down. Try again in … seconds.</li>
+<li>AI is temporarily rate-limited. Please try again later.</li>
+<li>Insights update queued until AI is ready.</li>
+</ul><p>Wait for the displayed cooldown to finish before trying again. If an Insights update is marked <strong>queued</strong>, leave it queued rather than repeatedly requesting another update. A rate-limit message without a countdown means you should retry later.</p></div></details>
+<details class="troubleshooting-item"><summary>The daily AI limit has been reached</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>AI has reached its daily usage limit. Please try again tomorrow.</li>
+<li>AI has reached the daily limit for this network. Please try again tomorrow.</li>
+</ul><p>Wait for the daily limit to reset. The network message applies to requests from your network, which may be shared with other users. Restarting the app does not reset these service limits.</p></div></details>
+<details class="troubleshooting-item"><summary>An AI feature is paused or unavailable</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>This AI feature is temporarily paused.</li>
+<li>AI web research is temporarily paused.</li>
+<li>AI access is currently unavailable.</li>
+<li>AI settings are unavailable.</li>
+<li>Invalid AI refresh settings.</li>
+<li>AI is temporarily unavailable because its service settings need attention.</li>
+</ul><p>Try the feature again later. These messages concern service availability, access, or settings supplied by the service. If the issue persists, contact support with the feature name and exact message.</p></div></details>
+<details class="troubleshooting-item"><summary>The request is too large</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>This request exceeds the current AI input limit. Try a shorter question or conversation.</li>
+<li>This request exceeds the current AI input limit. Try using less document context.</li>
+</ul><p>Ask a shorter, more focused question. Where the feature lets you choose source material, use less context. If a short question still fails because of the document or conversation size, report the document type and approximate length to support.</p></div></details>
+<details class="troubleshooting-item"><summary>AI cannot read the document</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Could not extract readable text from this document.</li>
+<li>Could not extract readable text from the filing PDF.</li>
+<li>Could not extract enough readable text to summarize this filing.</li>
+</ul><p>Check whether you can select and copy text in the original document. A scanned or image-only PDF may not contain the text needed for chat or summaries. Try a text-based PDF or the HTML version of the filing when available.</p></div></details>
+<details class="troubleshooting-item"><summary>An answer fails or stops early</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>AI could not process this request. Please try again.</li>
+<li>AI could not complete this request. Please try again.</li>
+<li>AI returned an empty response. Please try again.</li>
+<li>AI returned a response that could not be read. Please try again.</li>
+<li>The AI response reached its length limit before finishing. Please try refreshing again.</li>
+<li>Cloud chat failed: …</li>
+<li>Cloud chat stream stopped before citations were finalized: …</li>
+</ul><p>Check your connection and retry once. For chat, narrow the question or request a shorter answer. For a summary, retry its refresh when available. Treat an interrupted response as incomplete. If the failure repeats, include the feature and exact error in your support report.</p></div></details>
+<h3 id="help-documents">Uploaded documents &amp; IR material</h3>
+<details class="troubleshooting-item"><summary>An upload is not a PDF</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Only PDF uploads are supported.</li>
+</ul><p>Choose a PDF file. If your source is another format, export it to PDF in its original app first; changing the filename extension does not convert it.</p></div></details>
+<details class="troubleshooting-item"><summary>A document source cannot be found</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>The selected document is not available.</li>
+<li>The uploaded document source is not available.</li>
+<li>The investor relations source copy is not available.</li>
+</ul><p>Confirm that the original file is available locally and can be opened. Download it first if it is only a cloud placeholder. For IR material, reopen the source from the company’s materials list. If needed, import the original PDF again; keep existing notes and annotations until you have checked their source links.</p></div></details>
+<details class="troubleshooting-item"><summary>The uploaded document cannot be saved</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>The uploaded document could not be saved.</li>
+</ul><p>Check that your Mac has free storage, then retry the upload with a locally available PDF. If it still fails, report the file size and error to support.</p></div></details>
+<details class="troubleshooting-item"><summary>The publication date is invalid</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Enter the publication date as MM/DD/YYYY or select N/A.</li>
+</ul><p>Enter the date in <strong>MM/DD/YYYY</strong> format. Select <strong>N/A</strong> if the publication date is unknown.</p></div></details>
+<details class="troubleshooting-item"><summary>An IR website blocks or returns the wrong document</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>The investor relations site returned a protection page instead of the document.</li>
+<li>The investor relations download is not a PDF.</li>
+<li>The investor relations material download was empty.</li>
+<li>Failed to download investor relations material (HTTP …).</li>
+</ul><p>Open the company’s original investor relations page in a browser. If the document is available there, download the actual PDF and import it into FilrAI. Some sites return a webpage or access-check page instead of the requested file. For a temporary server error, try again later.</p></div></details>
+<details class="troubleshooting-item"><summary>An IR snapshot fails or the document is too large</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Failed to create a PDF snapshot of this investor relations page.</li>
+<li>The investor relations document exceeds the 2 GB size limit.</li>
+</ul><p>For a snapshot failure, use the company’s original PDF when available. For the size-limit message, choose a smaller source document below <strong>2 GB</strong>. Include the original material URL when reporting a repeated snapshot failure.</p></div></details>
+<h3 id="help-annotations">Annotations &amp; citation links</h3>
+<details class="troubleshooting-item"><summary>A note has no text selection</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Select text in the document before creating a note.</li>
+<li>The selected PDF text could not be anchored.</li>
+</ul><p>Select text in the document before creating the annotation. If a PDF selection cannot be anchored, try selecting a shorter, continuous block of text. Check that the PDF contains selectable text rather than only an image.</p></div></details>
+<details class="troubleshooting-item"><summary>A citation cannot jump to its source</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Citation unavailable</li>
+<li>The quoted text could not be located in this PDF. You can still read the excerpt in Chat.</li>
+<li>The quoted text could not be located in this document view. You can still read the excerpt in Chat.</li>
+</ul><p>The citation could not be linked to a location in the current document. Review any source text shown in Chat and search for it in the original document manually. Verify the evidence before relying on the answer; report repeated failures with the source document and question.</p></div></details>
+<h3 id="help-tables-models">Table extraction &amp; Model Builder</h3>
+<details class="troubleshooting-item"><summary>A table selection cannot be read</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>No readable text was found in the selected region.</li>
+<li>The selected region did not look like a table (rows: …, columns: …).</li>
+<li>The selected region is too small or invalid.</li>
+<li>Could not capture the selected content region.</li>
+</ul><p>Wait for the document to finish displaying, then use <strong>Extract table</strong> to select a complete table region with visible rows and columns. Increase the zoom if the text is very small and retry the selection. Check the extracted values and column alignment before copying them into your spreadsheet.</p></div></details>
+<details class="troubleshooting-item"><summary>The model needs a ticker or supported filings</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Please enter a ticker.</li>
+<li>No annual filings (10-K/20-F/40-F) found for ….</li>
+<li>No annual/interim model filings found for ….</li>
+</ul><p>Enter a ticker and confirm the selected company. If no model filings are found, check which annual and interim filings are available for that company. A model can only be built from supported filings available for the requested periods.</p></div></details>
+<details class="troubleshooting-item"><summary>Interim models are unavailable</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Interim-period models are currently unavailable for foreign issuers. Select AA to build an annual model.</li>
+<li>Interim-period availability could not be verified. Select AA to build an annual model.</li>
+</ul><p>Switch <strong>Build Mode</strong> to <strong>AA</strong> and build an annual model. The selected issuer cannot currently be used for an interim-period model, or its eligibility could not be verified.</p></div></details>
+<details class="troubleshooting-item"><summary>The XBRL model cannot be loaded</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Failed to load XBRL model for ….</li>
+</ul><p>Retry after checking your connection. If the same company continues to fail, report its ticker, build mode, historical-year selection, and any filing shown in the build status. You can still review the original statements in the Viewer; a readable filing does not guarantee that its structured data can be used to build a model.</p></div></details>
+<details class="troubleshooting-item"><summary>There is no workbook to export</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>No workbook is available to export.</li>
+</ul><p>Select <strong>Build</strong> and wait for it to complete successfully before exporting. Resolve any build error first. If you change the build configuration, rebuild the workbook before exporting the updated model.</p></div></details>
+<details class="troubleshooting-item"><summary>A file export fails</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Export failed: …</li>
+<li>Download failed</li>
+</ul><p>Retry the export to a writable local folder with a new filename, and check available storage. If the error mentions an HTTP status, follow the <a href="#help-loading">filing download guidance</a>. If it refers to an unavailable source, reopen the source document first. Report the export format and full error if it persists.</p></div></details>
+<h3 id="help-watchlists-markets">Watchlists, Filing Tracker &amp; Markets</h3>
+<details class="troubleshooting-item"><summary>A watchlist name or selection is invalid</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Enter a name for the watchlist.</li>
+<li>A watchlist named … already exists.</li>
+<li>That watchlist is no longer available.</li>
+<li>Keep at least one watchlist.</li>
+</ul><p>Enter a non-empty, unique name. If a watchlist is no longer available, select an existing one. Create another watchlist before deleting the last remaining list.</p></div></details>
+<details class="troubleshooting-item"><summary>A ticker cannot be added</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>Enter a ticker before adding it to the watchlist.</li>
+<li>… is not supported by the live Watchlist yet.</li>
+<li>This ticker is missing a supported exchange for TradingView.</li>
+<li>Search for a company or ticker before adding it to the Tracker.</li>
+<li>Couldn’t resolve … to a filing Tracker company.</li>
+</ul><p>Search for the company and confirm its ticker before adding it. The live Watchlist needs a supported exchange mapping; the Filing Tracker needs a company that can be resolved to SEC filings. If the ticker is correct but still fails, send support its name, ticker, exchange, and whether you were using the Watchlist or Tracker.</p></div></details>
+<details class="troubleshooting-item"><summary>Market data will not load</summary><div class="troubleshooting-answer"><p class="troubleshooting-label">Messages you may see</p><ul class="error-messages">
+<li>FRED data returned HTTP …</li>
+<li>FX data returned HTTP …</li>
+<li>Failed to decode FRED data: …</li>
+<li>Failed to decode the FX currency catalog: …</li>
+<li>No observations</li>
+</ul><p>Check your connection and try loading the data again. HTTP or decoding errors can indicate a provider or service response problem. <strong>No observations</strong> means no usable values were returned for that request; it does not mean the value is zero. If the problem persists, include the series or currency pair and exact message.</p></div></details>
+<p>Still stuck, or seeing a different message? <a href="#support">Contact support</a> with the exact error and the steps that led to it.</p></section>
+<section class="docs-section workspace-docs" id="support">
+<h2><a href="#support">Contacting support<span class="section-hash" aria-hidden="true"> #</span></a></h2>
+<p>Email <a href="mailto:filr.support@gmail.com">filr.support@gmail.com</a> with the following details:</p>
+<ul class="workspace-key">
+<li>Your <strong>FilrAI version</strong> and <strong>macOS version</strong>.</li>
+<li>The <strong>exact error message</strong>, what you were trying to do, and the steps to reproduce it.</li>
+<li>The relevant <strong>ticker, filing URL, or document type</strong>. For Model Builder, include the build mode and historical-year selection; for an export, include the file format.</li>
+<li>Whether the issue affects one company or document, or several, and whether retrying helped.</li>
+<li>A screenshot if it helps explain the issue. Remove private notes, confidential document content, and credentials before sharing.</li>
+</ul>
+<a class="docs-inline-link" href="../support.html">Visit Support →</a>
+</section><nav class="chapter-pagination" aria-label="Chapter navigation"><a href="model-builder.html"><span>Previous</span>Model Builder</a><a href="index.html"><span>Next</span>Welcome</a></nav>
+</main></div>
+<footer class="footer"><div class="footer-inner"><a class="brand" href="../index.html"><img src="../icon_512.png" alt="" width="32" height="32"><span>FilrAI</span></a><nav class="footer-links" aria-label="Legal and support links"><a href="index.html">Documentation</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../support.html">Support</a></nav></div></footer>
+</body></html>
