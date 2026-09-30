@@ -20,8 +20,8 @@
 <aside class="docs-sidebar"><a class="docs-label" href="index.html">Documentation</a><nav aria-label="Documentation chapters"><a href="index.html">Welcome</a><a href="getting-started.html">Getting started</a><a href="overview.html">Overview</a><a href="markets.html">Markets</a><a href="watchlists-tracker.html">Watchlists &amp; Filing Tracker</a><a href="filings.html">Filings</a><a href="viewer.html">Document Viewer</a><a href="notes.html">Notes</a><a href="model-builder.html" aria-current="page">Model Builder</a><a href="reference.html">Reference &amp; troubleshooting</a></nav></aside>
 <details class="docs-mobile-menu"><summary>Documentation chapters</summary><nav aria-label="Documentation chapters"><a href="index.html">Welcome</a><a href="getting-started.html">Getting started</a><a href="overview.html">Overview</a><a href="markets.html">Markets</a><a href="watchlists-tracker.html">Watchlists &amp; Filing Tracker</a><a href="filings.html">Filings</a><a href="viewer.html">Document Viewer</a><a href="notes.html">Notes</a><a href="model-builder.html" aria-current="page">Model Builder</a><a href="reference.html">Reference &amp; troubleshooting</a></nav></details>
 <main id="main" class="docs-main">
-<header class="docs-heading"><p class="docs-kicker">FilrAI Documentation <span class="draft-badge">Draft</span></p><h1>Model Builder</h1><p class="docs-intro">Build financial statement workbooks and valuation templates from company filings.</p><p class="docs-updated">Last updated <time datetime="2026-09-18">September 18, 2026</time></p></header>
-<nav class="docs-toc" aria-label="On this page"><h2>On this page</h2><ul><li><a href="#configuration">Build configuration</a></li><li><a href="#preview-export">3 Statement Model</a></li><li><a href="#valuation-templates">Valuation templates</a></li></ul></nav>
+<header class="docs-heading"><p class="docs-kicker">FilrAI Documentation</p><h1>Model Builder</h1><p class="docs-intro">Build financial statement workbooks and valuation templates from company filings.</p><p class="docs-updated">Last updated <time datetime="2026-09-30">September 30, 2026</time></p></header>
+<nav class="docs-toc" aria-label="On this page"><h2>On this page</h2><ul><li><a href="#configuration">Build configuration</a></li><li><a href="#preview-export">3 Statement Model</a></li><li><a href="#valuation-templates">Valuation templates</a></li><li><a href="#limitations">Missing data &amp; review</a></li></ul></nav>
 <figure class="docs-figure"><div class="docs-image-link"><div class="docs-image-crop model-builder-workspace-crop"><img src="../assets/docs/model-builder-workspace.png?v=five-years-lbo" width="3248" height="2122" loading="lazy" decoding="async" alt="Model Builder configured for Apple with AA mode, five historical years, ten forecast years, Leveraged Buyout selected, and Bold subtotals enabled."></div></div><figcaption><span>Model Builder configuration and workbook layout preview.</span></figcaption></figure>
 <section class="docs-section workspace-docs" id="configuration">
 <h2><a href="#configuration">Build configuration<span class="section-hash" aria-hidden="true"> #</span></a></h2>
@@ -52,14 +52,11 @@
 <p>A template for transaction assumptions, sources and uses, an operating case, a debt schedule, and sponsor returns.</p>
 <figure class="docs-figure"><div class="docs-image-link"><div class="docs-image-crop model-builder-workspace-crop"><img src="../assets/docs/model-builder-lbo-template.png?v=no-workbook-banner" width="3248" height="2122" loading="lazy" decoding="async" alt="LBO template in Excel with transaction assumptions, sources and uses, an operating case, and a debt schedule."></div></div><figcaption><span>Leveraged Buyout template.</span></figcaption></figure>
 </section>
-<details class="model-reference workspace-docs">
-<summary>Workbook reference — in progress</summary>
-<p>These topics are being prepared.</p>
-<h3 id="workbook">Workbook structure</h3><p>Statements, worksheet organization, and links between financial statements.</p>
-<h3 id="dcf-methodology">DCF methodology</h3><p>Cash-flow construction, discount rates, terminal value, and the enterprise-to-equity bridge.</p>
-<h3 id="inputs-conventions">Inputs &amp; conventions</h3><p>Sourced historical figures, formulas, user-supplied assumptions, units, and signs.</p>
-<h3 id="limitations">Missing data &amp; limitations</h3><p>Unavailable historical data, output limitations, and items to review after export.</p>
-</details>
+<section class="docs-section workspace-docs" id="limitations">
+<h2><a href="#limitations">Missing data &amp; review<span class="section-hash" aria-hidden="true"> #</span></a></h2>
+<p>A blank historical cell does not necessarily mean zero; the value may be unavailable in the source data. Figures that could not be combined across periods appear in the red <strong>Unmerged / Needs Review</strong> section.</p>
+<p>Generated workbooks may contain errors or omissions. Review flagged items and compare key figures with the original filings.</p>
+</section>
 <nav class="chapter-pagination" aria-label="Chapter navigation"><a href="notes.html"><span>Previous</span>Notes</a><a href="reference.html"><span>Next</span>Reference &amp; troubleshooting</a></nav>
 </main></div>
 <footer class="footer"><div class="footer-inner"><a class="brand" href="../index.html"><img src="../icon_512.png" alt="" width="32" height="32"><span>FilrAI</span></a><nav class="footer-links" aria-label="Legal and support links"><a href="index.html">Documentation</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../support.html">Support</a></nav></div></footer>
