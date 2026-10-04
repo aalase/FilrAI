@@ -22,7 +22,7 @@
 <meta name="twitter:image" content="https://filrapp.com/assets/social-preview.png?v=3">
 <meta name="twitter:image:alt" content="FilrAI. Powerful equity research. Built for Mac.">
 <link rel="icon" type="image/png" href="icon_512.png">
-<link rel="stylesheet" href="page.css?v=20260930-hero-clean">
+<link rel="stylesheet" href="page.css?v=20261003-excel-crop">
 <title>FilrAI</title>
 </head>
 <body class="home">
@@ -49,9 +49,13 @@
 <p class="hero-lead">Financials, market data, company insights, and Excel models in one native Mac app</p>
 </div>
 <figure class="product-figure hero-figure" id="overview">
+<div class="hero-preview-controls"><div class="preview-theme-toggle" role="group" aria-label="Screenshot appearance" hidden>
+<button type="button" data-theme="light" aria-label="Light mode" aria-pressed="true" aria-controls="hero-preview"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
+<button type="button" data-theme="dark" aria-label="Dark mode" aria-pressed="false" aria-controls="hero-preview"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.4A8.5 8.5 0 0 1 8.6 4a8.5 8.5 0 1 0 11.4 11.4Z"/></svg></button>
+</div></div>
 <div class="screenshot-link">
 <div class="app-shot ">
-<img src="assets/overview.png" width="3248" height="2122" fetchpriority="high" alt="FilrAI Overview showing The Trade Desk's company description, price chart, and five years of financial results.">
+<img id="hero-preview" src="assets/overview-home.png?v=20261002-theme" width="3248" height="2122" fetchpriority="high" alt="FilrAI Overview showing The Trade Desk's company description, price chart, and five years of financial results.">
 </div>
 </div>
 </figure>
@@ -59,13 +63,13 @@
 <section class="product-section viewer-section" id="research" aria-labelledby="viewer-title">
 <div class="wrap section-heading viewer-heading">
 <p class="eyebrow">Document Viewer</p>
-<h2 id="viewer-title">Go deeper into every filing.</h2>
+<h2 id="viewer-title">Go further with company filings.</h2>
 <p>View IR material, quickly navigate SEC filings, and keep your ideas in one place. Copy and export tables directly into Excel.</p>
 </div>
 <figure class="product-figure viewer-figure" >
 <div class="screenshot-link">
 <div class="app-shot ">
-<img src="assets/viewer.png?v=20260928-statements" width="3248" height="2018" loading="lazy" decoding="async" alt="Apple's annual filing open in FilrAI, with multiple company filing tabs, section navigation, and an Export table button.">
+<img src="assets/viewer-home.png" width="3248" height="2122" loading="lazy" decoding="async" alt="Apple's annual filing open in FilrAI, with multiple company filing tabs, section navigation, and an Export table button.">
 </div>
 </div>
 </figure>
@@ -134,7 +138,7 @@
 <figure class="product-figure">
 <div class="screenshot-link">
 <div class="app-shot notes-shot">
-<img src="assets/notes.png?v=20260928" width="3248" height="2018" loading="lazy" decoding="async" alt="Trade Desk research in the Notes tab, with AI insights and modeling insights beside saved company notes and document annotations below.">
+<img src="assets/notes-home.png" width="3248" height="2122" loading="lazy" decoding="async" alt="Trade Desk research in the Notes tab, with AI insights and modeling insights beside saved company notes and document annotations below.">
 </div>
 </div>
 </figure>
@@ -184,17 +188,27 @@
 </div>
 <p>3-statement models are formatted from up to 10 years of historical data, including quarterly financials. Add valuation templates and export directly to Excel.</p>
 </div>
-<div class="model-screenshots">
-<figure class="product-figure">
+<div class="model-gallery" role="region" aria-label="Model Builder screenshots" aria-roledescription="carousel">
+<div class="model-gallery-stage">
+<button class="gallery-arrow gallery-previous" type="button" aria-label="Previous screenshot" aria-controls="model-slides" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+<button class="gallery-arrow gallery-next" type="button" aria-label="Next screenshot" aria-controls="model-slides" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+<div class="model-screenshots" id="model-slides" tabindex="0" aria-label="Scroll through Model Builder and Excel screenshots">
+<figure class="product-figure" role="group" aria-roledescription="slide" aria-label="1 of 2: Model Builder">
 <div class="app-shot">
 <img src="assets/model-builder.png" width="3248" height="2122" loading="lazy" decoding="async" alt="Model Builder configured for Microsoft, showing historical years, a discounted cash flow option, and a preview of the workbook layout.">
 </div>
 </figure>
-<figure class="product-figure">
+<figure class="product-figure" role="group" aria-roledescription="slide" aria-label="2 of 2: Excel model">
 <div class="app-shot model-excel-shot">
 <img src="assets/model-excel-msft.png?v=3" width="3108" height="2206" loading="lazy" decoding="async" alt="Exported Microsoft Excel model with populated historical income statements and balance sheets alongside forecast columns.">
 </div>
 </figure>
+</div>
+</div>
+<div class="model-gallery-dots" aria-label="Choose screenshot" hidden>
+<button type="button" aria-label="Show Model Builder screenshot" aria-current="true" aria-controls="model-slides" data-slide="0"></button>
+<button type="button" aria-label="Show Excel model screenshot" aria-controls="model-slides" data-slide="1"></button>
+</div>
 </div>
 </div>
 </section>
@@ -219,5 +233,7 @@
 </nav>
 </div>
 </footer>
+<script src="hero-preview.js?v=20261002-selector" defer></script>
+<script src="model-gallery.js?v=arrows" defer></script>
 </body>
 </html>

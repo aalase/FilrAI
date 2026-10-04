@@ -1,0 +1,31 @@
+(() => {
+  const track = document.getElementById('model-slides');
+  const controls = document.querySelector('.model-gallery-dots');
+  if (!track || !controls) return;
+  const dots = [...controls.querySelectorAll('button')];
+  const slides = [...track.children];
+  let current = 0;
+  const show = index => {
+    const next = (index + slides.length) % slides.length;
+    track.scrollTo({ left: next * track.clientWidth, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+  };
+  controls.hidden = false;
+  document.querySelectorAll('.gallery-arrow').forEach(button => {
+    button.hidden = false;
+    button.addEventListener('click', () => show(current + (button.classList.contains('gallery-next') ? 1 : -1)));
+  });
+  dots.forEach((dot, index) => dot.addEventListener('click', () => show(index)));
+  track.addEventListener('scroll', () => {
+    current = Math.round(track.scrollLeft / track.clientWidth);
+    dots.forEach((dot, index) => {
+      if (index === current) dot.setAttribute('aria-current', 'true');
+      else dot.removeAttribute('aria-current');
+    });
+  }, { passive: true });
+  track.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+    event.preventDefault();
+    show(current + (event.key === 'ArrowRight' ? 1 : -1));
+  });
+  new ResizeObserver(() => track.scrollTo({ left: current * track.clientWidth, behavior: 'instant' })).observe(track);
+})();
