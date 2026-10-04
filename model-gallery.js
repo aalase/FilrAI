@@ -4,19 +4,25 @@
   if (!track || !controls) return;
   const dots = [...controls.querySelectorAll('button')];
   const slides = [...track.children];
+  const arrows = [...document.querySelectorAll('.gallery-arrow')];
   let current = 0;
+  const updateArrows = () => arrows.forEach(button => {
+    button.disabled = button.classList.contains('gallery-next') ? current === slides.length - 1 : current === 0;
+  });
   const show = index => {
-    const next = (index + slides.length) % slides.length;
+    const next = Math.max(0, Math.min(index, slides.length - 1));
     track.scrollTo({ left: next * track.clientWidth, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   };
   controls.hidden = false;
-  document.querySelectorAll('.gallery-arrow').forEach(button => {
+  updateArrows();
+  arrows.forEach(button => {
     button.hidden = false;
     button.addEventListener('click', () => show(current + (button.classList.contains('gallery-next') ? 1 : -1)));
   });
   dots.forEach((dot, index) => dot.addEventListener('click', () => show(index)));
   track.addEventListener('scroll', () => {
-    current = Math.round(track.scrollLeft / track.clientWidth);
+    current = Math.max(0, Math.min(Math.round(track.scrollLeft / track.clientWidth), slides.length - 1));
+    updateArrows();
     dots.forEach((dot, index) => {
       if (index === current) dot.setAttribute('aria-current', 'true');
       else dot.removeAttribute('aria-current');
