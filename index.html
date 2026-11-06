@@ -22,7 +22,7 @@
 <meta name="twitter:image" content="https://filrapp.com/assets/social-preview.png?v=3">
 <meta name="twitter:image:alt" content="FilrAI. Powerful equity research. Built for Mac.">
 <link rel="icon" type="image/png" href="icon_512.png">
-<link rel="stylesheet" href="page.css?v=20261004-gallery-bounds">
+<link rel="stylesheet" href="page.css?v=20261004-viewer-alignment">
 <title>FilrAI</title>
 </head>
 <body class="home">
@@ -61,18 +61,22 @@
 </figure>
 </section>
 <section class="product-section viewer-section" id="research" aria-labelledby="viewer-title">
-<div class="wrap section-heading viewer-heading">
+<div class="wrap section-heading split-heading">
+<div>
 <p class="eyebrow">Document Viewer</p>
 <h2 id="viewer-title">Go further with company filings.</h2>
+</div>
 <p>View IR material, quickly navigate SEC filings, and keep your ideas in one place. Copy and export tables directly into Excel.</p>
 </div>
-<figure class="product-figure viewer-figure" >
+<div class="wrap">
+<figure class="product-figure viewer-figure">
 <div class="screenshot-link">
 <div class="app-shot ">
 <img src="assets/viewer-home.png" width="3248" height="2122" loading="lazy" decoding="async" alt="Apple's annual filing open in FilrAI, with multiple company filing tabs, section navigation, and an Export table button.">
 </div>
 </div>
 </figure>
+</div>
 <div class="wrap viewer-details">
 <div class="viewer-tools">
 <article>
@@ -149,7 +153,7 @@
 <div class="section-heading split-heading">
 <div>
 <p class="eyebrow">Markets</p>
-<h2>View the markets at a glance.</h2>
+<h2>Markets at a glance</h2>
 </div>
 <p>Keep an eye on the markets with heatmaps. Track exchange rates, indicators, and upcoming releases in one place.</p>
 </div>
@@ -193,21 +197,33 @@
 <button class="gallery-arrow gallery-previous" type="button" aria-label="Previous screenshot" aria-controls="model-slides" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
 <button class="gallery-arrow gallery-next" type="button" aria-label="Next screenshot" aria-controls="model-slides" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
 <div class="model-screenshots" id="model-slides" tabindex="0" aria-label="Scroll through Model Builder and Excel screenshots">
-<figure class="product-figure" role="group" aria-roledescription="slide" aria-label="1 of 2: Model Builder">
+<figure class="product-figure" role="group" aria-roledescription="slide" aria-label="1 of 4: Model Builder">
 <div class="app-shot">
 <img src="assets/model-builder.png" width="3248" height="2122" loading="lazy" decoding="async" alt="Model Builder configured for Microsoft, showing historical years, a discounted cash flow option, and a preview of the workbook layout.">
 </div>
 </figure>
-<figure class="product-figure" role="group" aria-roledescription="slide" aria-label="2 of 2: Excel model">
+<figure class="product-figure" role="group" aria-roledescription="slide" aria-label="2 of 4: Excel financial statements">
 <div class="app-shot model-excel-shot">
-<img src="assets/model-excel-msft.png?v=3" width="3108" height="2206" loading="lazy" decoding="async" alt="Exported Microsoft Excel model with populated historical income statements and balance sheets alongside forecast columns.">
+<img src="assets/model-excel-statements.png" width="3248" height="2018" loading="lazy" decoding="async" alt="Microsoft Excel workbook showing historical financial statements and forecast columns.">
+</div>
+</figure>
+<figure class="product-figure" role="group" aria-roledescription="slide" aria-label="3 of 4: Excel DCF template">
+<div class="app-shot model-excel-shot">
+<img src="assets/model-excel-dcf.png" width="3248" height="2018" loading="lazy" decoding="async" alt="Microsoft Excel discounted cash flow template with forecasts, WACC inputs, and valuation sections.">
+</div>
+</figure>
+<figure class="product-figure" role="group" aria-roledescription="slide" aria-label="4 of 4: Excel LBO template">
+<div class="app-shot model-excel-shot">
+<img src="assets/model-excel-lbo.png" width="3248" height="2018" loading="lazy" decoding="async" alt="Microsoft Excel leveraged buyout template with transaction assumptions, sources and uses, operating case, and debt schedule.">
 </div>
 </figure>
 </div>
 </div>
 <div class="model-gallery-dots" aria-label="Choose screenshot" hidden>
 <button type="button" aria-label="Show Model Builder screenshot" aria-current="true" aria-controls="model-slides" data-slide="0"></button>
-<button type="button" aria-label="Show Excel model screenshot" aria-controls="model-slides" data-slide="1"></button>
+<button type="button" aria-label="Show Excel financial statements screenshot" aria-controls="model-slides" data-slide="1"></button>
+<button type="button" aria-label="Show Excel DCF template screenshot" aria-controls="model-slides" data-slide="2"></button>
+<button type="button" aria-label="Show Excel LBO template screenshot" aria-controls="model-slides" data-slide="3"></button>
 </div>
 </div>
 </div>
