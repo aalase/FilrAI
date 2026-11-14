@@ -204,6 +204,8 @@ h2 { font-size:clamp(34px,3.5vw,50px); line-height:1.1; font-weight:650; letter-
 .model-screenshots::-webkit-scrollbar { display:none; }
 .model-screenshots > figure { flex:0 0 100%; min-width:0; scroll-snap-align:start; display:flex; align-items:center; padding:2px; }
 .model-screenshots .app-shot { width:100%; box-shadow:0 0 0 1px rgb(0 0 0 / 8%); }
+.model-screenshots .app-shot:not(.model-excel-shot) { aspect-ratio:3024 / 1798; }
+.model-screenshots .app-shot:not(.model-excel-shot) img { top:-4.2269%; }
 .model-screenshots .model-excel-shot { width:87.5%; margin-inline:auto; aspect-ratio:2500 / 1794; border-radius:10px; }
 .model-excel-shot img { width:129.92%; left:-4.48%; top:-4.347826%; }
 .model-gallery-dots { display:flex; justify-content:center; margin-top:18px; }
