@@ -1,0 +1,37 @@
+:root {
+  color-scheme: light;
+  --page: #e5e8eb;
+  --surface: #e1e4e8;
+  --ink: #15191d;
+  --muted: #41484f;
+  --line: #a5aab0;
+  --blue: #074e86;
+  --blue-soft: #e0eaf2;
+  --silver: linear-gradient(164deg, #f6f7f8 0%, #e9ecee 29%, #ccd1d6 57%, #aab0b6 100%);
+}
+body, .redirect-page { background: var(--silver) fixed; }
+.site-header { background: rgb(242 244 246 / 90%); border-color: rgb(75 83 93 / 16%); }
+.soft-section, .closing-section, .footer, .page-hero { background: transparent; }
+.home .hero { background: var(--silver); }
+.home .hero-figure {
+  width: 100%;
+  margin-top: clamp(32px, 3.5vw, 52px);
+  padding: clamp(24px, 2.8vw, 44px) 0 clamp(36px, 5vw, 78px);
+  background: url("assets/overview-contours.svg") center / 100% 100% no-repeat;
+}
+.hero-figure .screenshot-link { width: min(76%, 1180px); margin-inline: auto; }
+.hero-figure .hero-preview-controls { margin-bottom: clamp(18px, 2vw, 30px); }
+@media (max-width: 700px) {
+  .hero-figure .screenshot-link { width: calc(100% - 32px); }
+}
+.home .hero-figure .app-shot {
+  border-radius: clamp(6px, .9vw, 14px);
+  box-shadow: 0 0 0 1px rgb(45 51 57 / 28%), 0 18px 38px -12px rgb(33 40 48 / 34%);
+}
+.hero-figure .preview-theme-toggle { background: #b9bfc5; }
+.hero-figure .preview-theme-toggle button { color: #424950; }
+.hero-figure .preview-theme-toggle button[aria-pressed="true"] { background: #f9fafb; color: #1d2429; }
+.product-section + .product-section { border-top: 1px solid rgb(68 77 86 / 16%); }
+.nav-links a, .document-card p, .document-card li { color: var(--muted); }
+.chapter-card, .troubleshooting-item, .redirect-card { background: rgb(249 250 251 / 72%); }
+.chapter-card:hover { background: #f5f7f9; }
