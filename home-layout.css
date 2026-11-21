@@ -1,0 +1,117 @@
+/* Homepage hero and feature layouts. */
+.home .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.35fr);
+  align-items: center;
+  gap: clamp(36px, 5vw, 80px);
+  min-height: calc(100svh - 73px);
+  padding: 64px max(48px, calc((100% - 1240px) / 2));
+  background: linear-gradient(145deg, #f6f7f8 0%, #e9ecef 55%, #d0d5db 100%);
+}
+/* Decorative ticker rain stays behind the copy and captured app window. */
+.home .hero-ticker-rain {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  container-type: size;
+  mask-image: linear-gradient(transparent, #000 12%, #000 86%, transparent);
+}
+.home .hero-ticker-rain span {
+  position: absolute;
+  top: -40px;
+  left: var(--x);
+  color: rgb(70 90 110 / 20%);
+  font: 500 var(--size, 16px)/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .08em;
+  animation: hero-ticker-fall var(--duration) linear infinite;
+  animation-delay: var(--delay);
+}
+@keyframes hero-ticker-fall {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(18px, calc(100cqh + 80px), 0); }
+}
+@media (max-width: 600px) {
+  .home .hero-ticker-rain span:nth-child(n + 7) { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home .hero-ticker-rain { display: none; }
+  .home .hero-ticker-rain span { animation: none; }
+}
+.home .hero-copy-wrap { text-align: left; padding: 0 0 36px; }
+.home .hero h1 { font-size: clamp(40px, 4.1vw, 64px); line-height: 1.13; letter-spacing: -.035em; font-weight: 650; }
+.home .hero-lead { max-width: 400px; margin: 24px 0 0; font-size: 18px; line-height: 1.6; letter-spacing: -.01em; }
+.home .hero-availability { margin-top: 28px; font-size: 13px; color: var(--muted); }
+.home .hero-figure { width: 100%; margin: 0; padding: 0; background: none; }
+.home .hero-figure .screenshot-link { width: 100%; }
+.home .hero-figure .hero-preview-controls { margin: 20px 0 0; }
+.home .hero-figure .app-shot { box-shadow: 0 0 0 1px rgb(45 51 57 / 22%), 0 24px 48px -16px rgb(33 40 48 / 28%); }
+@media (max-width: 850px) {
+  .home .hero { grid-template-columns: 1fr; gap: 36px; padding: 48px 28px; }
+  .home .hero-copy-wrap { text-align: center; padding: 0; }
+  .home .hero h1 { font-size: clamp(34px, 6vw, 48px); }
+  .home .hero-lead { margin: 20px auto 0; }
+  .home .hero-availability { margin-top: 20px; }
+  .home .hero-figure { max-width: 650px; margin-inline: auto; }
+}
+@media (max-width: 600px) {
+  .home .nav { min-height: 70px; flex-direction: row; padding-block: 8px; gap: 12px; }
+  .home .nav-links { width: auto; gap: 12px; flex-wrap: nowrap; }
+  .home .nav-links a { font-size: 12px; }
+  .home .hero { min-height: 0; padding: 36px 24px; gap: 30px; }
+  .home .hero h1 { font-size: clamp(32px, 8.5vw, 42px); }
+  .home .hero-lead { font-size: 16px; }
+  .home .desktop-break { display: block; }
+}
+
+/* Let the captured window edge define the screenshot silhouette. */
+.home .product-section .app-shot,
+.home .product-section .viewer-feature-crop {
+  background: transparent;
+  box-shadow: none;
+  filter: drop-shadow(0 12px 18px rgb(33 40 48 / 14%));
+}
+
+/* Full Excel windows from the updated export captures. */
+.home .model-screenshots .model-excel-shot { width: 100%; aspect-ratio: 3024 / 1898; }
+.home .model-excel-shot img { width: 107.407407%; left: -3.703704%; top: -4.004215%; }
+
+/* Match the shared content margins at each breakpoint. */
+@media (min-width: 601px) and (max-width: 900px) {
+  .home .hero { padding-inline: 24px; }
+}
+@media (max-width: 600px) {
+  .home .hero { padding-inline: 20px; }
+}
+
+/* Full-window product images share the hero's presentation scale. */
+.home .feature-intro {
+  display: grid;
+  grid-template-columns: minmax(0, .6fr) minmax(0, 1.4fr);
+  align-items: center;
+  gap: clamp(28px, 3.5vw, 48px);
+}
+.home .feature-intro > * { min-width: 0; }
+.home .feature-intro .section-heading { display: block; margin: 0; }
+.home .feature-intro h2 { font-size: clamp(32px, 3vw, 44px); line-height: 1.15; letter-spacing: -.035em; }
+.home .feature-intro .section-heading > p { margin-top: 24px; padding: 0; max-width: 400px; font-size: 18px; }
+.home .feature-intro > .product-figure,
+.home .feature-intro > .feature-media,
+.home .feature-intro > .model-gallery { width: 100%; }
+.home .viewer-details { margin-top: 72px; }
+@media (max-width: 850px) {
+  .home .feature-intro { grid-template-columns: 1fr; gap: 32px; }
+  .home .feature-intro > .product-figure,
+  .home .feature-intro > .feature-media,
+  .home .feature-intro > .model-gallery { max-width: 650px; margin-inline: auto; }
+  .home .feature-intro .section-heading > p { max-width: 530px; font-size: 17px; }
+}
+
+/* Matching hero captures: preserve the complete 2746 × 1898 app window. */
+.home .hero-figure .hero-narrow-shot { aspect-ratio: 2746 / 1898; }
+.home .hero-figure .hero-narrow-shot img { width: 108.157320%; left: -4.078660%; top: -4.004215%; }

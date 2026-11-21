@@ -24,7 +24,8 @@
 <link rel="icon" type="image/png" href="assets/filrai-icon-df1c5e9b.png">
 <link rel="stylesheet" href="page.css?v=20261004-viewer-alignment">
 <title>FilrAI</title>
-<link rel="stylesheet" href="silver.css">
+<link rel="stylesheet" href="silver.css?v=20261121">
+<link rel="stylesheet" href="home-layout.css?v=20261121">
 </head>
 <body class="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -44,32 +45,47 @@
 </header>
 <main id="main">
 <section class="hero" aria-labelledby="hero-title">
+<div class="hero-ticker-rain" aria-hidden="true">
+<span style="--x: 5%; --duration: 29s; --delay: -8s; --size: 17px">AAPL</span>
+<span style="--x: 22%; --duration: 36s; --delay: -24s; --size: 14px">MSFT</span>
+<span style="--x: 39%; --duration: 31s; --delay: -4s; --size: 16px">NVDA</span>
+<span style="--x: 57%; --duration: 38s; --delay: -29s; --size: 15px">AMZN</span>
+<span style="--x: 75%; --duration: 33s; --delay: -11s; --size: 17px">GOOG</span>
+<span style="--x: 91%; --duration: 27s; --delay: -19s; --size: 15px">META</span>
+<span style="--x: 13%; --duration: 34s; --delay: -31s; --size: 14px">TSLA</span>
+<span style="--x: 30%; --duration: 28s; --delay: -14s; --size: 16px">TTD</span>
+<span style="--x: 48%; --duration: 40s; --delay: -18s; --size: 14px">JPM</span>
+<span style="--x: 66%; --duration: 30s; --delay: -27s; --size: 16px">V</span>
+<span style="--x: 83%; --duration: 35s; --delay: -3s; --size: 15px">COST</span>
+<span style="--x: 95%; --duration: 37s; --delay: -16s; --size: 14px">AMD</span>
+</div>
 <div class="hero-copy-wrap">
-<p class="eyebrow">Coming soon to App Store</p>
 <h1 id="hero-title">Powerful equity research.<br class="desktop-break"> Built for Mac.</h1>
-<p class="hero-lead">Financials, market data, company insights, and Excel models in one native Mac app</p>
+<p class="hero-lead">Company financials, SEC filings, and Excel models in one Mac app.</p>
+<p class="hero-availability">Coming soon to the App Store</p>
 </div>
 <figure class="product-figure hero-figure" id="overview">
+<div class="screenshot-link">
+<div class="app-shot hero-narrow-shot">
+<img id="hero-preview" src="assets/overview-narrow-091d38676e.png" width="2970" height="2122" fetchpriority="high" alt="FilrAI Overview showing The Trade Desk's company description, price chart, and financial results.">
+</div>
+</div>
 <div class="hero-preview-controls"><div class="preview-theme-toggle" role="group" aria-label="Screenshot appearance" hidden>
 <button type="button" data-theme="light" aria-label="Light mode" aria-pressed="true" aria-controls="hero-preview"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
 <button type="button" data-theme="dark" aria-label="Dark mode" aria-pressed="false" aria-controls="hero-preview"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.4A8.5 8.5 0 0 1 8.6 4a8.5 8.5 0 1 0 11.4 11.4Z"/></svg></button>
 </div></div>
-<div class="screenshot-link">
-<div class="app-shot ">
-<img id="hero-preview" src="assets/overview-home.png?v=20261002-theme" width="3248" height="2122" fetchpriority="high" alt="FilrAI Overview showing The Trade Desk's company description, price chart, and five years of financial results.">
-</div>
-</div>
 </figure>
 </section>
 <section class="product-section viewer-section" id="research" aria-labelledby="viewer-title">
-<div class="wrap section-heading split-heading">
+<div class="wrap feature-intro">
+<div class="section-heading split-heading">
 <div>
 <p class="eyebrow">Document Viewer</p>
 <h2 id="viewer-title">A browser for company filings.</h2>
 </div>
 <p>View IR material, quickly navigate SEC filings, and keep your ideas in one place. Copy and export tables directly into Excel.</p>
 </div>
-<div class="wrap">
+<div class="feature-media">
 <figure class="product-figure viewer-figure">
 <div class="screenshot-link">
 <div class="app-shot ">
@@ -77,6 +93,7 @@
 </div>
 </div>
 </figure>
+</div>
 </div>
 <div class="wrap viewer-details">
 <div class="viewer-tools">
@@ -132,7 +149,7 @@
 </div>
 </section>
 <section class="product-section notes-section" id="notes" aria-labelledby="notes-title">
-<div class="wrap">
+<div class="wrap feature-intro">
 <div class="section-heading split-heading">
 <div>
 <p class="eyebrow">Notes</p>
@@ -150,7 +167,7 @@
 </div>
 </section>
 <section class="product-section soft-section" id="markets">
-<div class="wrap">
+<div class="wrap feature-intro">
 <div class="section-heading split-heading">
 <div>
 <p class="eyebrow">Markets</p>
@@ -185,11 +202,11 @@
 </div>
 </section>
 <section class="product-section soft-section" id="model-builder">
-<div class="wrap">
+<div class="wrap feature-intro">
 <div class="section-heading split-heading">
 <div>
 <p class="eyebrow">Model Builder</p>
-<h2>Build your next model.</h2>
+<h2>Export company financials to Excel</h2>
 </div>
 <p>3-statement models with annual and quarterly historical figures. Add valuation templates and export directly to Excel.</p>
 </div>
@@ -205,17 +222,17 @@
 </figure>
 <figure class="product-figure" role="group" aria-roledescription="slide" aria-label="2 of 4: Excel financial statements">
 <div class="app-shot model-excel-shot">
-<img src="assets/model-excel-statements.png" width="3248" height="2022" loading="lazy" decoding="async" alt="Microsoft Excel workbook showing historical financial statements and forecast columns.">
+<img src="assets/model-excel-statements-6ae28e715e.png" width="3248" height="2122" loading="lazy" decoding="async" alt="Microsoft Excel workbook showing historical financial statements and forecast columns.">
 </div>
 </figure>
 <figure class="product-figure" role="group" aria-roledescription="slide" aria-label="3 of 4: Excel DCF template">
 <div class="app-shot model-excel-shot">
-<img src="assets/model-excel-dcf.png" width="3248" height="2022" loading="lazy" decoding="async" alt="Microsoft Excel discounted cash flow template with forecasts, WACC inputs, and valuation sections.">
+<img src="assets/model-excel-dcf-70f59c57e6.png" width="3248" height="2122" loading="lazy" decoding="async" alt="Microsoft Excel discounted cash flow template with forecasts, WACC inputs, and valuation sections.">
 </div>
 </figure>
 <figure class="product-figure" role="group" aria-roledescription="slide" aria-label="4 of 4: Excel ratio analysis">
 <div class="app-shot model-excel-shot">
-<img src="assets/model-excel-ratios.png" width="3248" height="2022" loading="lazy" decoding="async" alt="Microsoft Excel ratio analysis worksheet showing Microsoft’s historical profitability, returns, liquidity, and cash flow ratios.">
+<img src="assets/model-excel-ratios-6d4edef2ad.png" width="3248" height="2122" loading="lazy" decoding="async" alt="Microsoft Excel ratio analysis worksheet showing Microsoft’s historical profitability, returns, liquidity, and cash flow ratios.">
 </div>
 </figure>
 </div>
@@ -250,7 +267,7 @@
 </nav>
 </div>
 </footer>
-<script src="hero-preview.js?v=20261002-selector" defer></script>
+<script src="hero-preview.js?v=20261121-matched" defer></script>
 <script src="model-gallery.js?v=20261004-bounds" defer></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
   const preview = document.getElementById('hero-preview');
   if (!toggle || !preview) return;
   const lightSource = preview.getAttribute('src');
-  const darkSource = 'assets/overview-home-dark.png';
+  const darkSource = 'assets/overview-narrow-dark-64d1654903.png';
   const description = preview.alt;
   const darkImage = new Image();
   darkImage.src = darkSource;
