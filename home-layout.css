@@ -115,3 +115,5 @@
 /* Matching hero captures: preserve the complete 2746 × 1898 app window. */
 .home .hero-figure .hero-narrow-shot { aspect-ratio: 2746 / 1898; }
 .home .hero-figure .hero-narrow-shot img { width: 108.157320%; left: -4.078660%; top: -4.004215%; }
+
+.home .closing-availability { margin: 0; }
